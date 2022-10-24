@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPO="https://github.com/Cultured_Heaven/ALPHA.git"
+REPO="https://github.com/Light-Sensei/AlphaUB.git"
 DIR="/root/Cultured_Heaven"
 
 spinner(){

@@ -1,9 +1,9 @@
 # ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
+# This file is a part of < https://github.com/Light-Sensei/AlphaUB/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
+# <https://github.com/Light-Sensei/AlphaUBOP/blob/main/LICENSE>.
 
 import os, subprocess
 from shutil import rmtree
@@ -70,7 +70,7 @@ def load_other_plugins(addons=None, pmbot=None, manager=None, vcbot=None):
             rmtree("addons")
         if not os.path.exists("addons"):
             subprocess.run(
-                f"git clone -q -b {Repo().active_branch} https://github.com/Cultured_Heaven/ALPHAAddons.git addons",
+                f"git clone -q -b {Repo().active_branch} https://github.com/Light-Sensei/AlphaUBAddons.git addons",
                 shell=True,
             )
         else:
@@ -78,7 +78,7 @@ def load_other_plugins(addons=None, pmbot=None, manager=None, vcbot=None):
 
         if not os.path.exists("addons"):
             subprocess.run(
-                "git clone -q https://github.com/Cultured_Heaven/ALPHAAddons.git addons",
+                "git clone -q https://github.com/Light-Sensei/AlphaUBAddons.git addons",
                 shell=True,
             )
         if os.path.exists("addons/addons.txt"):

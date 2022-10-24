@@ -1,9 +1,9 @@
 # ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
+# This file is a part of < https://github.com/Light-Sensei/AlphaUB/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
+# <https://www.github.com/Light-Sensei/AlphaUB/blob/main/LICENSE/>.
 
 from datetime import datetime
 
@@ -29,7 +29,7 @@ if Owner_info_msg is None:
 
 **Message Forwards** - {udB.get_key("PMBOT")}
 
-**ALPHA [v{ALPHA_version}](https://github.com/Cultured_Heaven/ALPHA), powered by @Cultured_Heaven**
+**ALPHA [v{ALPHA_version}](https://github.com/Light-Sensei/AlphaUB), powered by @Cultured_Heaven**
 """
 
 

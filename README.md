@@ -8,18 +8,18 @@
 <b>A stable pluggable Telegram userbot based on Telethon.</b>
 
 [![](https://img.shields.io/badge/ALPHA-v0.7-darkgreen)](#)
-[![Stars](https://img.shields.io/github/stars/Cultured_Heaven/ALPHA?style=flat-square&color=yellow)](https://github.com/Cultured_Heaven/ALPHA/stargazers)
-[![Forks](https://img.shields.io/github/forks/Cultured_Heaven/ALPHA?style=flat-square&color=orange)](https://github.com/Cultured_Heaven/ALPHA/fork)
-[![Size](https://img.shields.io/github/repo-size/Cultured_Heaven/ALPHA?style=flat-square&color=green)](https://github.com/Cultured_Heaven/ALPHA/)   
+[![Stars](https://img.shields.io/github/stars/Light-Sensei/AlphaUB?style=flat-square&color=yellow)](https://github.com/Light-Sensei/AlphaUB/stargazers)
+[![Forks](https://img.shields.io/github/forks/Light-Sensei/AlphaUB?style=flat-square&color=orange)](https://github.com/Light-Sensei/AlphaUB/fork)
+[![Size](https://img.shields.io/github/repo-size/Light-Sensei/AlphaUB?style=flat-square&color=green)](https://github.com/Light-Sensei/AlphaUB/)   
 [![Python](https://img.shields.io/badge/Python-v3.10.3-blue)](https://www.python.org/)
-[![CodeFactor](https://www.codefactor.io/repository/github/Cultured_Heaven/ALPHA/badge/main)](https://www.codefactor.io/repository/github/Cultured_Heaven/ALPHA/overview/main)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Cultured_Heaven/ALPHA/graphs/commit-activity)
-[![Docker Pulls](https://img.shields.io/docker/pulls/theCultured_Heaven/ALPHA?style=flat-square)](https://img.shields.io/docker/pulls/theCultured_Heaven/ALPHA?style=flat-square)   
-[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Cultured_Heaven/ALPHA)
-[![Contributors](https://img.shields.io/github/contributors/Cultured_Heaven/ALPHA?style=flat-square&color=green)](https://github.com/Cultured_Heaven/ALPHA/graphs/contributors)
+[![CodeFactor](https://www.codefactor.io/repository/github/Light-Sensei/AlphaUB/badge/main)](https://www.codefactor.io/repository/github/Light-Sensei/AlphaUB/overview/main)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/Light-Sensei/AlphaUB/graphs/commit-activity)
+[![Docker Pulls](https://img.shields.io/docker/pulls/theLight-Sensei/AlphaUB?style=flat-square)](https://img.shields.io/docker/pulls/theLight-Sensei/AlphaUB?style=flat-square)   
+[![Open Source Love svg2](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)](https://github.com/Light-Sensei/AlphaUB)
+[![Contributors](https://img.shields.io/github/contributors/Light-Sensei/AlphaUB?style=flat-square&color=green)](https://github.com/Light-Sensei/AlphaUB/graphs/contributors)
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](https://makeapullrequest.com)
-[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE)   
-[![Sparkline](https://stars.medv.io/Cultured_Heaven/ALPHA.svg)](https://stars.medv.io/Cultured_Heaven/ALPHA)
+[![License](https://img.shields.io/badge/License-AGPL-blue)](https://github.com/Light-Sensei/AlphaUB/blob/main/LICENSE)   
+[![Sparkline](https://stars.medv.io/Light-Sensei/AlphaUB.svg)](https://stars.medv.io/Light-Sensei/AlphaUB)
 ----
 
 # Deploy
@@ -44,7 +44,7 @@ Get the [Necessary Variables](#Necessary-Variables) and then click the button be
 ## Deploy to Okteto
 Get the [Necessary Variables](#Necessary-Variables) and then click the button below!
 
-[![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com/deploy?repository=https://github.com/Cultured_Heaven/ALPHA)
+[![Develop on Okteto](https://okteto.com/develop-okteto.svg)](https://cloud.okteto.com/deploy?repository=https://github.com/Light-Sensei/AlphaUB)
 
 ## Deploy Locally
 - [Traditional Method](#local-deploy---traditional-method)
@@ -59,7 +59,7 @@ Get the [Necessary Variables](#Necessary-Variables) and then click the button be
 ### Local Deploy - Traditional Method
 - Get your [Necessary Variables](#Necessary-Variables)
 - Clone the repository:    
-`git clone https://github.com/Cultured_Heaven/ALPHA.git`
+`git clone https://github.com/Light-Sensei/AlphaUB.git`
 - Go to the cloned folder:    
 `cd ALPHA`
 - Create a virtual env:      
@@ -77,7 +77,7 @@ Get the [Necessary Variables](#Necessary-Variables) and then click the button be
     `wget -O session.py https://git.io/JY9JI && python session.py`
   - For Windows Users:
     `cd desktop ; wget https://git.io/JY9JI -o ALPHA.py ; python ALPHA.py`
-- Fill your details in a `.env` file, as given in [`.env.sample`](https://github.com/Cultured_Heaven/ALPHA/blob/main/.env.sample).
+- Fill your details in a `.env` file, as given in [`.env.sample`](https://github.com/Light-Sensei/AlphaUB/blob/main/.env.sample).
 (You can either edit and rename the file or make a new file named `.env`.)
 - Run the bot:
   - Linux Users:
@@ -114,7 +114,7 @@ One of the following database:
 
 ## Session String
 Different ways to get your `SESSION`:
-* [![Run on Repl.it](https://replit.com/badge/github/Cultured_Heaven/ALPHA)](https://replit.com/@Cultured_Heaven/ALPHAStringSession)
+* [![Run on Repl.it](https://replit.com/badge/github/Light-Sensei/AlphaUB)](https://replit.com/@Light-Sensei/AlphaUBStringSession)
 * Linux : `wget -O session.py https://git.io/JY9JI && python3 session.py`
 * PowerShell : `cd desktop ; wget https://git.io/JY9JI ; python ALPHA.py`
 * Termux : `wget -O session.py https://git.io/JY9JI && python session.py`

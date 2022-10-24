@@ -1,9 +1,9 @@
 # ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
+# This file is a part of < https://github.com/Light-Sensei/AlphaUB/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
+# <https://www.github.com/Light-Sensei/AlphaUB/blob/main/LICENSE/>.
 
 from . import get_help
 
@@ -70,7 +70,7 @@ def ULTPIC():
 
 buttons = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/Cultured_Heaven/ALPHA"),
+        Button.url(get_string("bot_3"), "https://github.com/Light-Sensei/AlphaUB"),
         Button.url(get_string("bot_4"), "t.me/ALPHASupportChat"),
     ]
 ]
@@ -335,7 +335,7 @@ async def _(e):
         )
     else:
         await xx.edit(
-            f'<code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong><a href="https://github.com/Cultured_Heaven/ALPHA/tree/{branch}">[{branch}]</a></strong>',
+            f'<code>Your BOT is </code><strong>up-to-date</strong><code> with </code><strong><a href="https://github.com/Light-Sensei/AlphaUB/tree/{branch}">[{branch}]</a></strong>',
             parse_mode="html",
             link_preview=False,
         )

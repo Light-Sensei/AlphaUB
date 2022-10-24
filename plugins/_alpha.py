@@ -1,9 +1,9 @@
 # ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
+# This file is a part of < https://github.com/Light-Sensei/AlphaUB/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
+# <https://www.github.com/Light-Sensei/AlphaUB/blob/main/LICENSE/>.
 
 from telethon.errors import (
     BotMethodInvalidError,
@@ -15,15 +15,15 @@ from . import LOG_CHANNEL, LOGS, Button, asst, eor, get_string, ALPHA_cmd
 
 REPOMSG = """
 • **ALPHA USERBOT** •\n
-• Repo - [Click Here](https://github.com/Cultured_Heaven/ALPHA)
-• Addons - [Click Here](https://github.com/Cultured_Heaven/ALPHAAddons)
+• Repo - [Click Here](https://github.com/Light-Sensei/AlphaUB)
+• Addons - [Click Here](https://github.com/Light-Sensei/AlphaUBAddons)
 • Support - @ALPHASupportChat
 """
 
 RP_BUTTONS = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/Cultured_Heaven/ALPHA"),
-        Button.url("Addons", "https://github.com/Cultured_Heaven/ALPHAAddons"),
+        Button.url(get_string("bot_3"), "https://github.com/Light-Sensei/AlphaUB"),
+        Button.url("Addons", "https://github.com/Light-Sensei/AlphaUBAddons"),
     ],
     [Button.url("Support Group", "t.me/ALPHASupportChat")],
 ]

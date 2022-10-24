@@ -2,8 +2,8 @@
 # ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
-# PLease read the GNU Affero General Public License in <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
+# This file is a part of < https://github.com/Light-Sensei/AlphaUB/ >
+# PLease read the GNU Affero General Public License in <https://www.github.com/Light-Sensei/AlphaUB/blob/main/LICENSE/>.
 
 clear
 echo -e "\e[1m"
@@ -26,7 +26,7 @@ apt-get update
 apt-get upgrade -y
 pkg upgrade -y
 pkg install python wget -y
-wget https://raw.githubusercontent.com/Cultured_Heaven/ALPHA/main/resources/session/ssgen.py
+wget https://raw.githubusercontent.com/Light-Sensei/AlphaUB/main/resources/session/ssgen.py
 pip uninstall telethon -y && install telethon
 clear
 python3 ssgen.py

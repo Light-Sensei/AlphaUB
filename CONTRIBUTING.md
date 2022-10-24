@@ -3,9 +3,9 @@ Any contribution done to this repository will be appreciated! 🎉
 
 ### About ALPHA
 - **ALPHA** is Telegram Userbot, which allow you to perform many task easily. 
-- It's base core is a pip package named [`AlphaOP`](https://GitHub.com/Cultured_Heaven/AlphaOP).
+- It's base core is a pip package named [`AlphaOP`](https://GitHub.com/Light-Sensei/AlphaUBOP).
 - This repository, contains ALPHA's official plugin files.
-- moreover, ALPHA User also have an option to get more plugins available at [`ALPHAAddons`](https://github.com/Cultured_Heaven/ALPHAAddons)
+- moreover, ALPHA User also have an option to get more plugins available at [`ALPHAAddons`](https://github.com/Light-Sensei/AlphaUBAddons)
 
 ### Issues
 - Search for existing Similar issues.
@@ -13,7 +13,7 @@ Any contribution done to this repository will be appreciated! 🎉
 - If you are busy or getting trouble while making changes, you can just open the issue (explaining it).
 
 ### Contributing
-- You can [fork](https://github.com/Cultured_Heaven/ALPHA/fork) this repository.
+- You can [fork](https://github.com/Light-Sensei/AlphaUB/fork) this repository.
 - You can commits your changes now.
 - You can [Git-Squash](https://docs.github.com/en/get-started/using-git/about-git-rebase) your commits, if they are more. [Optional]
 - At last, You are ready to [`make a Pull Request`](https://docs.github.com/en/github/collaborating-with-pull-requests/proposing-changes-to-your-work-with-pull-requests/creating-a-pull-request).

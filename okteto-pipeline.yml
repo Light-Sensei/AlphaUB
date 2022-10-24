@@ -1,3 +1,3 @@
-icon: https://raw.githubusercontent.com/Cultured_Heaven/ALPHA/main/resources/extras/logo_readme.jpg
+icon: https://raw.githubusercontent.com/Light-Sensei/AlphaUB/main/resources/extras/logo_readme.jpg
 deploy:
     - okteto deploy --build -f docker-compose.yml

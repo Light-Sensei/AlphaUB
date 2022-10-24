@@ -2,9 +2,9 @@
 # ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
+# This file is a part of < https://github.com/Light-Sensei/AlphaUB/ >
 # Please read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
+# <https://www.github.com/Light-Sensei/AlphaUB/blob/main/LICENSE/>.
 
 # Standalone file for facilitating local deploys.
 
@@ -29,7 +29,7 @@ def start():
     print("Welcome to ALPHA, lets start setting up!\n\n")
     print("Cloning the repository...\n\n")
     os.system("rm -rf ALPHA")
-    os.system("git clone https://github.com/Cultured_Heaven/ALPHA")
+    os.system("git clone https://github.com/Light-Sensei/AlphaUB")
     print("\n\nDone")
     os.chdir("ALPHA")
     clear_screen()
@@ -66,7 +66,7 @@ def start():
     print(all_done)
     isitdone = input("\n\nIs it all correct? [y/n]")
     if isitdone == "y" or isitdone != "n":
-        # https://github.com/Cultured_Heaven/ALPHA/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
+        # https://github.com/Light-Sensei/AlphaUB/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
         f = open(".env", "w")
         f.write(all_done)
     else:
@@ -123,7 +123,7 @@ def check_for_py():
 
 def gen_session():
     print("\nProcessing...")
-    # https://github.com/Cultured_Heaven/ALPHA/main/resources/startup/locals.py#L35
+    # https://github.com/Light-Sensei/AlphaUB/main/resources/startup/locals.py#L35
     os.system("python3 resources/session/ssgen.py")
 
 
