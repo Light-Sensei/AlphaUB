@@ -128,7 +128,7 @@ ALPHA is licensed under [GNU Affero General Public License](https://www.gnu.org/
 ---
 
 # Credits
-* [![ALPHA_DEVS](https://img.shields.io/static/v1?label=Cultured_Heaven&message=devs&color=critical)](https://t.me/ALPHADevs)
+* [Light](https://github/Light-Sensei)
 * [Yui](https://github/yuisakura)
 
 > Made with 💕 by [Quinx Network](https://t.me/Quinx_Network).    
