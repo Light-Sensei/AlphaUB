@@ -7,7 +7,7 @@
 
 <b>A stable pluggable Telegram userbot based on Telethon.</b>
 
-[![](https://img.shields.io/badge/ALPHA-v0.7-darkgreen)](#)
+[![](https://img.shields.io/badge/ALPHA-v0.1-blue)](#)
 [![Stars](https://img.shields.io/github/stars/Light-Sensei/AlphaUB?style=flat-square&color=yellow)](https://github.com/Light-Sensei/AlphaUB/stargazers)
 [![Forks](https://img.shields.io/github/forks/Light-Sensei/AlphaUB?style=flat-square&color=orange)](https://github.com/Light-Sensei/AlphaUB/fork)
 [![Size](https://img.shields.io/github/repo-size/Light-Sensei/AlphaUB?style=flat-square&color=green)](https://github.com/Light-Sensei/AlphaUB/)   
