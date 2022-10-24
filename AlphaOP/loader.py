@@ -1,9 +1,9 @@
 # Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
+# <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
 import contextlib
 import glob
@@ -62,7 +62,7 @@ class Loader:
                 self._logger.error(f"{plugin}: '{er.name}' not installed!")
             except Exception as exc:
                 modl = None
-                self._logger.error(f"pyUltroid - {self.key} - ERROR - {plugin}")
+                self._logger.error(f"AlphaOP - {self.key} - ERROR - {plugin}")
                 self._logger.exception(exc)
             if callable(after_load):
                 if func == import_module:

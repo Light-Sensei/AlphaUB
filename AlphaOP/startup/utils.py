@@ -1,9 +1,9 @@
 # Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
+# <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
 from importlib import util
 from sys import modules
@@ -17,7 +17,7 @@ def load_addons(plugin_name):
         return
     from .. import HNDLR, LOGS, asst, udB, ultroid_bot
     from .._misc import _supporter as xxx
-    from pyUltroid import fns
+    from AlphaOP import fns
     from .._misc._assistant import asst_cmd, callback, in_pattern
     from .._misc._decorators import ultroid_cmd
     from .._misc._supporter import Config, admin_cmd, sudo_cmd
@@ -75,7 +75,7 @@ def load_addons(plugin_name):
     modules["fridaybot.utils"] = xxx
     modules["fridaybot.Config"] = xxx
     modules["userbot.uniborgConfig"] = xxx
-    modules["pyUltroid.functions"] = fns
+    modules["AlphaOP.functions"] = fns
     spec.loader.exec_module(mod)
     modules[name] = mod
     doc = modules[name].__doc__.format(i=HNDLR) if modules[name].__doc__ else ""

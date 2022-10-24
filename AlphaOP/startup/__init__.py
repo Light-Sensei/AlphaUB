@@ -1,9 +1,9 @@
 # Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
+# <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
 import os
 import platform
@@ -40,7 +40,7 @@ if run_as_module:
     from telethon import __version__
     from telethon.tl.alltlobjects import LAYER
 
-    from ..version import __version__ as __pyUltroid__
+    from ..version import __version__ as __AlphaOP__
     from ..version import ultroid_version
 
     file = f"ultroid{sys.argv[6]}.log" if len(sys.argv) > 6 else "ultroid.log"
@@ -89,7 +89,7 @@ if run_as_module:
     )
 
     LOGS.info(f"Python version - {platform.python_version()}")
-    LOGS.info(f"py-Ultroid Version - {__pyUltroid__}")
+    LOGS.info(f"py-Ultroid Version - {__AlphaOP__}")
     LOGS.info(f"Telethon Version - {__version__} [Layer: {LAYER}]")
     LOGS.info(f"Ultroid Version - {ultroid_version} [{HOSTED_ON}]")
 

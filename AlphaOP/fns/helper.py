@@ -1,9 +1,9 @@
 # Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
+# <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
 import asyncio
 import math
@@ -167,7 +167,7 @@ if run_as_module:
             output = "**Plugin** - `{}`\n".format(plug)
             for i in HELP[plug]:
                 output += i
-            output += "\n© @TeamUltroid"
+            output += "\n© @Cultured_Heaven"
             await eod(ok, f"✓ `Ultroid - Installed`: `{plug}` ✓\n\n{output}")
         elif plug in CMD_HELP:
             output = f"Plugin Name-{plug}\n\n✘ Commands Available-\n\n"
@@ -540,13 +540,13 @@ async def restart(ult=None):
             LOGS.exception(er)
     else:
         if len(sys.argv) == 1:
-            os.execl(sys.executable, sys.executable, "-m", "pyUltroid")
+            os.execl(sys.executable, sys.executable, "-m", "AlphaOP")
         else:
             os.execl(
                 sys.executable,
                 sys.executable,
                 "-m",
-                "pyUltroid",
+                "AlphaOP",
                 sys.argv[1],
                 sys.argv[2],
                 sys.argv[3],

@@ -2,12 +2,12 @@ import sys
 import os
 from typing import Any, Dict, List, Union
 from glob import glob
-from pyUltroid import *
-from pyUltroid.fns.tools import translate
+from AlphaOP import *
+from AlphaOP.fns.tools import translate
 try:
     from yaml import safe_load
 except ModuleNotFoundError:
-    from pyUltroid.fns.tools import safe_load
+    from AlphaOP.fns.tools import safe_load
 
 ULTConfig.lang = udB.get_key("language") or os.getenv("LANGUAGE", "en")
 

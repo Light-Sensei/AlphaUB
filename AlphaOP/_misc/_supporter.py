@@ -1,9 +1,9 @@
 # Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
+# <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 #
 #   To Install Other USERBOTs plugin Support
 #
@@ -16,8 +16,8 @@ from pathlib import Path
 
 from telethon import events, types
 
-from pyUltroid._misc._decorators import compile_pattern, ultroid_cmd
-from pyUltroid._misc._wrappers import eod, eor
+from AlphaOP._misc._decorators import compile_pattern, ultroid_cmd
+from AlphaOP._misc._wrappers import eod, eor
 
 from .. import *
 from ..dB._core import LIST

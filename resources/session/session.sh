@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
 # Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
-# PLease read the GNU Affero General Public License in <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# PLease read the GNU Affero General Public License in <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
 
 clear
 echo -e "\e[1m"
@@ -26,7 +26,7 @@ apt-get update
 apt-get upgrade -y
 pkg upgrade -y
 pkg install python wget -y
-wget https://raw.githubusercontent.com/TeamUltroid/ultroid/main/resources/session/ssgen.py
+wget https://raw.githubusercontent.com/Cultured_Heaven/ultroid/main/resources/session/ssgen.py
 pip uninstall telethon -y && install telethon
 clear
 python3 ssgen.py

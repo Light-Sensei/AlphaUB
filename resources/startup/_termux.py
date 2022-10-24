@@ -1,10 +1,10 @@
 # /usr/bin/python3
 # Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
 # Please read the GNU Affero General Public License in
-# <https://www.github.com/TeamUltroid/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
 
 from os import system, path
 from time import sleep
@@ -40,7 +40,7 @@ APT_PACKAGES = ["ffmpeg", "neofetch", "mediainfo"]
 
 DISCLAIMER_TEXT = ""
 
-COPYRIGHT = f"©️ TeamUltroid {datetime.now().year}"
+COPYRIGHT = f"©️ Cultured_Heaven {datetime.now().year}"
 
 HEADER = f"""{Fore.MAGENTA}
 ╔╗ ╔╗╔╗  ╔╗            ╔╗
@@ -256,6 +256,6 @@ print(
     "\nYou can head over to @UltroidSupportChat, if you get stuck somewhere, and need help."
 )
 sleep(0.5)
-print("\nMade with ❤️ by @TeamUltroid...")
+print("\nMade with ❤️ by @Cultured_Heaven...")
 
 system("pip3 uninstall -q colorama -y")

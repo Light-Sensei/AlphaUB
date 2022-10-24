@@ -1,9 +1,9 @@
 # Ultroid - UserBot
-# Copyright (C) 2021-2022 TeamUltroid
+# Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/TeamUltroid/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
 # PLease read the GNU Affero General Public License in
-# <https://github.com/TeamUltroid/pyUltroid/blob/main/LICENSE>.
+# <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
 import os, subprocess
 from shutil import rmtree
@@ -70,7 +70,7 @@ def load_other_plugins(addons=None, pmbot=None, manager=None, vcbot=None):
             rmtree("addons")
         if not os.path.exists("addons"):
             subprocess.run(
-                f"git clone -q -b {Repo().active_branch} https://github.com/TeamUltroid/UltroidAddons.git addons",
+                f"git clone -q -b {Repo().active_branch} https://github.com/Cultured_Heaven/UltroidAddons.git addons",
                 shell=True,
             )
         else:
@@ -78,7 +78,7 @@ def load_other_plugins(addons=None, pmbot=None, manager=None, vcbot=None):
 
         if not os.path.exists("addons"):
             subprocess.run(
-                "git clone -q https://github.com/TeamUltroid/UltroidAddons.git addons",
+                "git clone -q https://github.com/Cultured_Heaven/UltroidAddons.git addons",
                 shell=True,
             )
         if os.path.exists("addons/addons.txt"):
@@ -120,7 +120,7 @@ def load_other_plugins(addons=None, pmbot=None, manager=None, vcbot=None):
                 else:
                     rmtree("vcbot")
             if not os.path.exists("vcbot"):
-                subprocess.run("git clone https://github.com/TeamUltroid/VcBot vcbot", shell=True)
+                subprocess.run("git clone https://github.com/Cultured_Heaven/VcBot vcbot", shell=True)
             try:
                 if not os.path.exists("vcbot/downloads"):
                     os.mkdir("vcbot/downloads")
