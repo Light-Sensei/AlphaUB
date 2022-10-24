@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-REPO="https://github.com/TeamUltroid/Ultroid.git"
-DIR="/root/TeamUltroid"
+REPO="https://github.com/Cultured_Heaven/Ultroid.git"
+DIR="/root/Cultured_Heaven"
 
 spinner(){
     local pid=$!
@@ -68,7 +68,7 @@ misc_install(){
                     git pull
             else
                 echo -e "Cloning VCBOT.."
-                git clone https://github.com/TeamUltroid/VcBot $DIR/vcbot
+                git clone https://github.com/Cultured_Heaven/VcBot $DIR/vcbot
             fi
             pip3 install pytgcalls>=3.0.0.dev21 && pip3 install av -q --no-binary av
     fi
