@@ -31,7 +31,6 @@
 [![Documentation](https://img.shields.io/badge/Documentation-ALPHA-blue)](http://ALPHA.tech/)
 
 # Tutorial 
-- Full Tutorial - [![Full Tutorial](https://img.shields.io/badge/Watch%20Now-blue)](https://www.youtube.com/watch?v=0wAV7pUzhDQ)
 
 - Tutorial to get Redis URL and password - [here.](./resources/extras/redistut.md)
 ---
@@ -39,7 +38,7 @@
 ## Deploy to Heroku
 Get the [Necessary Variables](#Necessary-Variables) and then click the button below!  
 
-[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://deploy.ALPHA.tech)
+[![Deploy](https://www.herokucdn.com/deploy/button.svg)](https://deploy.Light-Sensei/AlphaUB.tech)
 
 ## Deploy to Okteto
 Get the [Necessary Variables](#Necessary-Variables) and then click the button below!
@@ -129,8 +128,7 @@ ALPHA is licensed under [GNU Affero General Public License](https://www.gnu.org/
 ---
 
 # Credits
-* [![Cultured_Heaven-Devs](https://img.shields.io/static/v1?label=Cultured_Heaven&message=devs&color=critical)](https://t.me/ALPHADevs)
-* [Lonami](https://github.com/LonamiWebs/) for [Telethon.](https://github.com/LonamiWebs/Telethon)
-* [MarshalX](https://github.com/MarshalX) for [PyTgCalls.](https://github.com/MarshalX/tgcalls)
+* [![ALPHA_DEVS](https://img.shields.io/static/v1?label=Cultured_Heaven&message=devs&color=critical)](https://t.me/ALPHADevs)
+* [Yui](https://github/yuisakura)
 
-> Made with 💕 by [@Cultured_Heaven](https://t.me/Cultured_Heaven).    
+> Made with 💕 by [Quinx Network](https://t.me/Quinx_Network).    
