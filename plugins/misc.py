@@ -1,8 +1,8 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -36,10 +36,10 @@ try:
 except ImportError:
     Img2HTMLConverter = None
 
-from . import async_searcher, get_random_user_data, get_string, re, ultroid_cmd
+from . import async_searcher, get_random_user_data, get_string, re, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="eod$")
+@ALPHA_cmd(pattern="eod$")
 async def diela(e):
     m = await e.eor(get_string("com_1"))
     li = "https://daysoftheyear.com"
@@ -55,7 +55,7 @@ async def diela(e):
     await m.edit(te, link_preview=False)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="pntrst( (.*)|$)",
 )
 async def pinterest(e):
@@ -76,7 +76,7 @@ async def pinterest(e):
     await e.client.send_file(e.chat_id, file, caption=f"Pin:- {m}")
 
 
-@ultroid_cmd(pattern="gadget( (.*)|$)")
+@ALPHA_cmd(pattern="gadget( (.*)|$)")
 async def mobs(e):
     mat = e.pattern_match.group(1).strip()
     if not mat:
@@ -111,7 +111,7 @@ async def mobs(e):
     await bt.delete()
 
 
-@ultroid_cmd(pattern="randomuser")
+@ALPHA_cmd(pattern="randomuser")
 async def _gen_data(event):
     x = await event.eor(get_string("com_1"))
     msg, pic = await get_random_user_data()
@@ -119,7 +119,7 @@ async def _gen_data(event):
     await x.delete()
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="ascii( (.*)|$)",
 )
 async def _(e):

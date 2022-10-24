@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 import re
 import time
@@ -50,8 +50,8 @@ upage = 0
 
 SUP_BUTTONS = [
     [
-        Button.url("• Repo •", url="https://github.com/Cultured_Heaven/Ultroid"),
-        Button.url("• Support •", url="t.me/UltroidSupportChat"),
+        Button.url("• Repo •", url="https://github.com/Cultured_Heaven/ALPHA"),
+        Button.url("• Support •", url="t.me/ALPHASupportChat"),
     ],
 ]
 
@@ -61,7 +61,7 @@ SUP_BUTTONS = [
 @in_pattern(owner=True, func=lambda x: not x.text)
 async def inline_alive(o):
     TLINK = inline_pic() or "https://graph.org/file/74d6259983e0642923fdb.jpg"
-    MSG = "• **Ultroid Userbot •**"
+    MSG = "• **ALPHA Userbot •**"
     WEB0 = InputWebDocument(
         "https://graph.org/file/acd4f5d61369f74c5e7a7.jpg", 0, "image/jpg", []
     )
@@ -71,7 +71,7 @@ async def inline_alive(o):
             text=MSG,
             include_media=True,
             buttons=SUP_BUTTONS,
-            title="Ultroid Userbot",
+            title="ALPHA Userbot",
             description="Userbot | Telethon",
             url=TLINK,
             thumb=WEB0,
@@ -82,7 +82,7 @@ async def inline_alive(o):
         RES,
         private=True,
         cache_time=300,
-        switch_pm="👥 ULTROID PORTAL",
+        switch_pm="👥 ALPHA PORTAL",
         switch_pm_param="start",
     )
 
@@ -107,7 +107,7 @@ async def inline_handler(event):
         )
     else:
         result = await event.builder.article(
-            title="Ultroid Help Menu", text=text, buttons=_main_help_menu
+            title="ALPHA Help Menu", text=text, buttons=_main_help_menu
         )
     await event.answer([result], private=True, cache_time=300, gallery=True)
 
@@ -238,17 +238,17 @@ async def _(event):
     changelog_str = changelog + "\n\n" + get_string("inline_8")
     if len(changelog_str) > 1024:
         await event.edit(get_string("upd_4"))
-        with open("ultroid_updates.txt", "w+") as file:
+        with open("ALPHA_updates.txt", "w+") as file:
             file.write(tl_chnglog)
         await event.edit(
             get_string("upd_5"),
-            file="ultroid_updates.txt",
+            file="ALPHA_updates.txt",
             buttons=[
                 [Button.inline("• Uᴘᴅᴀᴛᴇ Nᴏᴡ •", data="updatenow")],
                 [Button.inline("« Bᴀᴄᴋ", data="ownr")],
             ],
         )
-        remove("ultroid_updates.txt")
+        remove("ALPHA_updates.txt")
     else:
         await event.edit(
             changelog_str,
@@ -398,7 +398,7 @@ async def ibuild(e):
                     results = [
                         await builder.document(
                             _pic,
-                            title="Ultroid Op",
+                            title="ALPHA Op",
                             text=txt,
                             description="@Cultured_Heaven",
                             buttons=btn,
@@ -413,7 +413,7 @@ async def ibuild(e):
                     cont = InputWebDocument(pic, 0, mime_type, [])
                 results = [
                     await builder.article(
-                        title="Ultroid Op",
+                        title="ALPHA Op",
                         type=_type,
                         text=txt,
                         description="@Cultured_Heaven",
@@ -428,7 +428,7 @@ async def ibuild(e):
         except Exception as er:
             LOGS.exception(er)
     result = [
-        await builder.article("Ultroid Op", text=txt, link_preview=False, buttons=btn)
+        await builder.article("ALPHA Op", text=txt, link_preview=False, buttons=btn)
     ]
     await e.answer(result)
 

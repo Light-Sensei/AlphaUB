@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -16,10 +16,10 @@
 """
 from PIL import Image
 
-from . import HNDLR, eor, get_string, os, ultroid_cmd
+from . import HNDLR, eor, get_string, os, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="size$")
+@ALPHA_cmd(pattern="size$")
 async def size(e):
     r = await e.get_reply_message()
     if not (r and r.media):
@@ -35,7 +35,7 @@ async def size(e):
     os.remove(img)
 
 
-@ultroid_cmd(pattern="resize( (.*)|$)")
+@ALPHA_cmd(pattern="resize( (.*)|$)")
 async def size(e):
     r = await e.get_reply_message()
     if not (r and r.media):

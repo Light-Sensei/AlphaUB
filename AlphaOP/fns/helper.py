@@ -1,7 +1,7 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
@@ -57,7 +57,7 @@ from . import *
 if run_as_module:
     from ..dB._core import ADDONS, HELP, LIST, LOADED
 
-from ..version import ultroid_version
+from ..version import ALPHA_version
 from .FastTelethon import download_file as downloadable
 from .FastTelethon import upload_file as uploadable
 
@@ -99,11 +99,11 @@ def inline_mention(user, custom=None, html=False):
 
 
 def un_plug(shortname):
-    from .. import asst, ultroid_bot
+    from .. import asst, ALPHA_bot
 
     try:
         all_func = LOADED[shortname]
-        for client in [ultroid_bot, asst]:
+        for client in [ALPHA_bot, asst]:
             for x, _ in client.list_event_handlers():
                 if x in all_func:
                     client.remove_event_handler(x)
@@ -112,7 +112,7 @@ def un_plug(shortname):
         ADDONS.remove(shortname)
     except (ValueError, KeyError):
         name = f"addons.{shortname}"
-        for client in [ultroid_bot, asst]:
+        for client in [ALPHA_bot, asst]:
             for i in reversed(range(len(client._event_builders))):
                 ev, cb = client._event_builders[i]
                 if cb.__module__ == name:
@@ -168,19 +168,19 @@ if run_as_module:
             for i in HELP[plug]:
                 output += i
             output += "\n© @Cultured_Heaven"
-            await eod(ok, f"✓ `Ultroid - Installed`: `{plug}` ✓\n\n{output}")
+            await eod(ok, f"✓ `ALPHA - Installed`: `{plug}` ✓\n\n{output}")
         elif plug in CMD_HELP:
             output = f"Plugin Name-{plug}\n\n✘ Commands Available-\n\n"
             output += str(CMD_HELP[plug])
-            await eod(ok, f"✓ `Ultroid - Installed`: `{plug}` ✓\n\n{output}")
+            await eod(ok, f"✓ `ALPHA - Installed`: `{plug}` ✓\n\n{output}")
         else:
             try:
                 x = f"Plugin Name-{plug}\n\n✘ Commands Available-\n\n"
                 for d in LIST[plug]:
                     x += HNDLR + d + "\n"
-                await eod(ok, f"✓ `Ultroid - Installed`: `{plug}` ✓\n\n`{x}`")
+                await eod(ok, f"✓ `ALPHA - Installed`: `{plug}` ✓\n\n`{x}`")
             except BaseException:
-                await eod(ok, f"✓ `Ultroid - Installed`: `{plug}` ✓")
+                await eod(ok, f"✓ `ALPHA - Installed`: `{plug}` ✓")
 
     async def heroku_logs(event):
         """
@@ -202,16 +202,16 @@ if run_as_module:
             )
         await xx.edit("`Downloading Logs...`")
         ok = app.get_log()
-        with open("ultroid-heroku.log", "w") as log:
+        with open("ALPHA-heroku.log", "w") as log:
             log.write(ok)
         await event.client.send_file(
             event.chat_id,
-            file="ultroid-heroku.log",
+            file="ALPHA-heroku.log",
             thumb=ULTConfig.thumb,
-            caption="**Ultroid Heroku Logs.**",
+            caption="**ALPHA Heroku Logs.**",
         )
 
-        os.remove("ultroid-heroku.log")
+        os.remove("ALPHA-heroku.log")
         await xx.delete()
 
     async def def_logs(ult, file):
@@ -219,7 +219,7 @@ if run_as_module:
             ult.chat_id,
             file=file,
             thumb=ULTConfig.thumb,
-            caption="**Ultroid Logs.**",
+            caption="**ALPHA Logs.**",
         )
 
     async def updateme_requirements():
@@ -236,8 +236,8 @@ if run_as_module:
         )
         ac_br = repo.active_branch.name
         ch_log = tldr_log = ""
-        ch = f"<b>Ultroid {ultroid_version} updates for <a href={UPSTREAM_REPO_URL}/tree/{ac_br}>[{ac_br}]</a>:</b>"
-        ch_tl = f"Ultroid {ultroid_version} updates for {ac_br}:"
+        ch = f"<b>ALPHA {ALPHA_version} updates for <a href={UPSTREAM_REPO_URL}/tree/{ac_br}>[{ac_br}]</a>:</b>"
+        ch_tl = f"ALPHA {ALPHA_version} updates for {ac_br}:"
         d_form = "%d/%m/%y || %H:%M"
         for c in repo.iter_commits(diff):
             ch_log += f"\n\n💬 <b>{c.count()}</b> 🗓 <b>[{c.committed_datetime.strftime(d_form)}]</b>\n<b><a href={UPSTREAM_REPO_URL.rstrip('/')}/commit/{c}>[{c.summary}]</a></b> 👨‍💻 <code>{c.author}</code>"

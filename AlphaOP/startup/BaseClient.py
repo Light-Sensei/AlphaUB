@@ -1,7 +1,7 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
@@ -23,7 +23,7 @@ from ..configs import Var
 from . import *
 
 
-class UltroidClient(TelegramClient):
+class ALPHAClient(TelegramClient):
     def __init__(
         self,
         session,
@@ -51,7 +51,7 @@ class UltroidClient(TelegramClient):
         self.dc_id = self.session.dc_id
 
     def __repr__(self):
-        return "<Ultroid.Client :\n self: {}\n bot: {}\n>".format(
+        return "<ALPHA.Client :\n self: {}\n bot: {}\n>".format(
             self.full_name, self._bot
         )
 

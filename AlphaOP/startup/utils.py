@@ -1,7 +1,7 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
@@ -15,11 +15,11 @@ def load_addons(plugin_name):
     base_name = plugin_name.split("/")[-1].split("\\")[-1].replace(".py", "")
     if base_name.startswith("__"):
         return
-    from .. import HNDLR, LOGS, asst, udB, ultroid_bot
+    from .. import HNDLR, LOGS, asst, udB, ALPHA_bot
     from .._misc import _supporter as xxx
     from AlphaOP import fns
     from .._misc._assistant import asst_cmd, callback, in_pattern
-    from .._misc._decorators import ultroid_cmd
+    from .._misc._decorators import ALPHA_cmd
     from .._misc._supporter import Config, admin_cmd, sudo_cmd
     from .._misc._wrappers import eod, eor
     from ..configs import Var
@@ -32,14 +32,14 @@ def load_addons(plugin_name):
     mod.udB = udB
     mod.asst = asst
     mod.tgbot = asst
-    mod.ultroid_bot = ultroid_bot
-    mod.ub = ultroid_bot
-    mod.bot = ultroid_bot
-    mod.ultroid = ultroid_bot
-    mod.borg = ultroid_bot
-    mod.telebot = ultroid_bot
-    mod.jarvis = ultroid_bot
-    mod.friday = ultroid_bot
+    mod.ALPHA_bot = ALPHA_bot
+    mod.ub = ALPHA_bot
+    mod.bot = ALPHA_bot
+    mod.ALPHA = ALPHA_bot
+    mod.borg = ALPHA_bot
+    mod.telebot = ALPHA_bot
+    mod.jarvis = ALPHA_bot
+    mod.friday = ALPHA_bot
     mod.eod = eod
     mod.edit_delete = eod
     mod.LOGS = LOGS
@@ -53,8 +53,8 @@ def load_addons(plugin_name):
     mod.eor = eor
     mod.edit_or_reply = eor
     mod.asst_cmd = asst_cmd
-    mod.ultroid_cmd = ultroid_cmd
-    mod.on_cmd = ultroid_cmd
+    mod.ALPHA_cmd = ALPHA_cmd
+    mod.on_cmd = ALPHA_cmd
     mod.callback = callback
     mod.Redis = udB.get_key
     mod.admin_cmd = admin_cmd

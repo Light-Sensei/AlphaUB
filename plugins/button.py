@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from . import get_help
 
@@ -16,11 +16,11 @@ from telethon.utils import pack_bot_file_id
 
 from AlphaOP.fns.tools import create_tl_btn, get_msg_button
 
-from . import HNDLR, get_string, mediainfo, ultroid_cmd
+from . import HNDLR, get_string, mediainfo, ALPHA_cmd
 from ._inline import something
 
 
-@ultroid_cmd(pattern="button")
+@ALPHA_cmd(pattern="button")
 async def butt(event):
     media, wut, text = None, None, None
     if event.reply_to:

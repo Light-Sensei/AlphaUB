@@ -1,5 +1,5 @@
 {
-    "name": "Ultroid UserBot",
+    "name": "ALPHA UserBot",
     "description": "Pluggable telegram userbot, made in python using Telethon.",
     "logo": "https://graph.org/file/031957757a4f6a5191040.jpg",
     "keywords": [
@@ -7,10 +7,10 @@
         "telegram",
         "userbot",
         "python",
-        "ultroid"
+        "ALPHA"
     ],
-    "repository": "https://github.com/Cultured_Heaven/Ultroid",
-    "website": "https://ultroid.tech",
+    "repository": "https://github.com/Cultured_Heaven/ALPHA",
+    "website": "https://ALPHA.tech",
     "success_url": "https://t.me/Cultured_Heaven",
     "stack": "container",
     "env": {
@@ -48,7 +48,7 @@
         }
     },
     "formation": {
-        "ultroid": {
+        "ALPHA": {
             "quantity": 1,
             "size": "free"
         }

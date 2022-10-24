@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 import re
 
@@ -24,14 +24,14 @@ from . import (
     get_string,
     in_pattern,
     inline_mention,
-    ultroid_bot,
-    ultroid_cmd,
+    ALPHA_bot,
+    ALPHA_cmd,
 )
 
 buddhhu = {}
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="wspr( (.*)|$)",
 )
 async def _(e):
@@ -62,7 +62,7 @@ async def _(e):
         query = zzz[1]
         if query.isdigit():
             query = int(query)
-        logi = await ultroid_bot.get_entity(query)
+        logi = await ALPHA_bot.get_entity(query)
         if not isinstance(logi, types.User):
             raise ValueError("Invalid Username.")
     except IndexError:
@@ -108,7 +108,7 @@ async def _(e):
         query = zzz[1]
         if query.isdigit():
             query = int(query)
-        logi = await ultroid_bot(gu(id=query))
+        logi = await ALPHA_bot(gu(id=query))
         user = logi.users[0]
         mention = inline_mention(user)
         x = user.status

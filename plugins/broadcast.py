@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 
 from . import get_help
@@ -17,10 +17,10 @@ from telethon.utils import get_display_name
 
 from AlphaOP.dB.broadcast_db import *
 
-from . import HNDLR, LOGS, eor, get_string, udB, ultroid_bot, ultroid_cmd
+from . import HNDLR, LOGS, eor, get_string, udB, ALPHA_bot, ALPHA_cmd
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="addch( (.*)|$)",
     allow_sudo=False,
 )
@@ -75,7 +75,7 @@ async def broadcast_adder(event):
     await x.delete()
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="remch( (.*)|$)",
     allow_sudo=False,
 )
@@ -96,7 +96,7 @@ async def broadcast_remover(event):
     await x.delete()
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="listchannels$",
 )
 async def list_all(event):
@@ -129,14 +129,14 @@ async def list_all(event):
         await x.edit(msg)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="forward$",
     allow_sudo=False,
 )
 async def forw(event):
     if not event.is_reply:
         return await event.eor(get_string("ex_1"))
-    ultroid_bot = event.client
+    ALPHA_bot = event.client
     channels = get_channels()
     x = await event.eor("Sending...")
     if not channels:
@@ -148,14 +148,14 @@ async def forw(event):
     error_count = 0
     for channel in channels:
         try:
-            await ultroid_bot.forward_messages(channel, previous_message)
+            await ALPHA_bot.forward_messages(channel, previous_message)
             sent_count += 1
             await x.edit(
                 f"Sent : {sent_count}\nError : {error_count}\nTotal : {len(channels)}",
             )
         except Exception:
             try:
-                await ultroid_bot.send_message(
+                await ALPHA_bot.send_message(
                     int(udB.get_key("LOG_CHANNEL")),
                     f"Error in sending at {channel}.",
                 )
@@ -167,12 +167,12 @@ async def forw(event):
             )
     await x.edit(f"{sent_count} messages sent with {error_count} errors.")
     if error_count > 0:
-        await ultroid_bot.send_message(
+        await ALPHA_bot.send_message(
             int(udB.get_key("LOG_CHANNEL")), f"{error_count} Errors"
         )
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="broadcast( (.*)|$)",
     allow_sudo=False,
 )
@@ -193,14 +193,14 @@ async def sending(event):
             sent_count = 0
             for channel in channels:
                 try:
-                    await ultroid_bot.send_message(channel, previous_message)
+                    await ALPHA_bot.send_message(channel, previous_message)
                     sent_count += 1
                     await x.edit(
                         f"Sent : {sent_count}\nError : {error_count}\nTotal : {len(channels)}",
                     )
                 except Exception as error:
 
-                    await ultroid_bot.send_message(
+                    await ALPHA_bot.send_message(
                         udB.get_key("LOG_CHANNEL"),
                         f"Error in sending at {channel}.\n\n{error}",
                     )
@@ -210,7 +210,7 @@ async def sending(event):
                     )
             await x.edit(f"{sent_count} messages sent with {error_count} errors.")
             if error_count > 0:
-                await ultroid_bot.send_message(
+                await ALPHA_bot.send_message(
                     int(udB.get_key("LOG_CHANNEL")),
                     f"{error_count} Errors",
                 )

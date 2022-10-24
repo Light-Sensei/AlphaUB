@@ -1,13 +1,13 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 #
 #   To Install Other USERBOTs plugin Support
 #
-#   ULTROID Don't Need This Stuffs
+#   ALPHA Don't Need This Stuffs
 #
 
 import inspect
@@ -16,19 +16,19 @@ from pathlib import Path
 
 from telethon import events, types
 
-from AlphaOP._misc._decorators import compile_pattern, ultroid_cmd
+from AlphaOP._misc._decorators import compile_pattern, ALPHA_cmd
 from AlphaOP._misc._wrappers import eod, eor
 
 from .. import *
 from ..dB._core import LIST
 from . import CMD_HELP, SUDO_M  # ignore: pylint
 
-ALIVE_NAME = ultroid_bot.me.first_name
+ALIVE_NAME = ALPHA_bot.me.first_name
 BOTLOG_CHATID = BOTLOG = udB.get_key("LOG_CHANNEL")
 
 
-bot = borg = catub = friday = ultroid_bot
-catub.cat_cmd = ultroid_cmd
+bot = borg = catub = friday = ALPHA_bot
+catub.cat_cmd = ALPHA_cmd
 
 black_list_chats = udB.get_key("BLACKLIST_CHATS")
 
@@ -50,8 +50,8 @@ def admin_cmd(pattern=None, command=None, **args):
 
 
 friday_on_cmd = admin_cmd
-command = ultroid_cmd
-register = ultroid_cmd
+command = ALPHA_cmd
+register = ALPHA_cmd
 
 
 def sudo_cmd(allow_sudo=True, pattern=None, command=None, **args):
@@ -87,7 +87,7 @@ class Config((object)):
         )
         TEMP_DOWNLOAD_DIRECTORY = TMP_DOWNLOAD_DIRECTORY
         TEMP_DIR = TMP_DOWNLOAD_DIRECTORY
-        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "Ultroid")
+        TELEGRAPH_SHORT_NAME = os.environ.get("TELEGRAPH_SHORT_NAME", "ALPHA")
         OCR_SPACE_API_KEY = os.environ.get("OCR_SPACE_API_KEY", None)
         TG_BOT_USER_NAME_BF_HER = asst.me.username
         UB_BLACK_LIST_CHAT = [

@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-REPO="https://github.com/Cultured_Heaven/Ultroid.git"
+REPO="https://github.com/Cultured_Heaven/ALPHA.git"
 DIR="/root/Cultured_Heaven"
 
 spinner(){
@@ -36,7 +36,7 @@ clone_repo(){
             fi
             return
     fi
-    echo -e "Cloning Ultroid ${BRANCH}... "
+    echo -e "Cloning ALPHA ${BRANCH}... "
     git clone -b $BRANCH $REPO $DIR
 }
 

@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -50,14 +50,14 @@ from . import (
     downloader,
     eor,
     get_string,
-    ultroid_cmd,
+    ALPHA_cmd,
 )
 
 if not os.path.isdir("pdf"):
     os.mkdir("pdf")
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="pdf( (.*)|$)",
 )
 async def pdfseimg(event):
@@ -119,7 +119,7 @@ async def pdfseimg(event):
         os.remove("ult.png")
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="pdtext( (.*)|$)",
 )
 async def pdfsetxt(event):
@@ -175,7 +175,7 @@ async def pdfsetxt(event):
     os.remove(dl)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="pdscan( (.*)|$)",
 )
 async def imgscan(event):
@@ -245,7 +245,7 @@ async def imgscan(event):
     os.remove(scann)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="pdsave( (.*)|$)",
 )
 async def savepdf(event):
@@ -325,7 +325,7 @@ async def savepdf(event):
     os.remove(ultt)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="pdsend( (.*)|$)",
 )
 async def sendpdf(event):

@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 from . import get_help
 
 __doc__ = get_help("help_channelhacks")
@@ -28,7 +28,7 @@ from AlphaOP.dB.ch_db import (
     rem_source_channel,
 )
 
-from . import LOGS, asst, eor, events, get_string, udB, ultroid_bot, ultroid_cmd
+from . import LOGS, asst, eor, events, get_string, udB, ALPHA_bot, ALPHA_cmd
 
 ERROR = {}
 
@@ -53,7 +53,7 @@ async def autopost_func(e):
                 await asst.send_message(udB.get_key("LOG_CHANNEL"), Error)
 
 
-@ultroid_cmd(pattern="shift (.*)")
+@ALPHA_cmd(pattern="shift (.*)")
 async def _(e):
     x = e.pattern_match.group(1).strip()
     z = await e.eor(get_string("com_1"))
@@ -81,7 +81,7 @@ async def _(e):
     await z.edit("Done")
 
 
-@ultroid_cmd(pattern="asource (.*)")
+@ALPHA_cmd(pattern="asource (.*)")
 async def source(e):
     if x := e.pattern_match.group(1).strip():
         try:
@@ -94,12 +94,12 @@ async def source(e):
     if not is_source_channel_added(y):
         add_source_channel(y)
         await e.eor(get_string("cha_2"))
-        ultroid_bot.add_handler(autopost_func, events.NewMessage())
+        ALPHA_bot.add_handler(autopost_func, events.NewMessage())
     elif is_source_channel_added(y):
         await e.eor(get_string("cha_3"))
 
 
-@ultroid_cmd(pattern="dsource( (.*)|$)")
+@ALPHA_cmd(pattern="dsource( (.*)|$)")
 async def dd(event):
     chat_id = event.pattern_match.group(1).strip()
     x = await event.eor(get_string("com_1"))
@@ -126,7 +126,7 @@ async def dd(event):
         await eor(x, "Source channel is already removed from database. ", time=3)
 
 
-@ultroid_cmd(pattern="listsource")
+@ALPHA_cmd(pattern="listsource")
 async def list_all(event):
     x = await event.eor(get_string("com_1"))
     num = get_no_source_channels()
@@ -159,7 +159,7 @@ async def list_all(event):
         await x.edit(msg)
 
 
-@ultroid_cmd(pattern="adest (.*)")
+@ALPHA_cmd(pattern="adest (.*)")
 async def destination(e):
     if x := e.pattern_match.group(1).strip():
         try:
@@ -176,7 +176,7 @@ async def destination(e):
         await e.eor("Destination channel already added")
 
 
-@ultroid_cmd(pattern="ddest( (.*)|$)")
+@ALPHA_cmd(pattern="ddest( (.*)|$)")
 async def dd(event):
     chat_id = event.pattern_match.group(1).strip()
     x = await event.eor(get_string("com_1"))
@@ -203,9 +203,9 @@ async def dd(event):
         await eor(x, "Destination channel is already removed from database. ", time=5)
 
 
-@ultroid_cmd(pattern="listdest")
+@ALPHA_cmd(pattern="listdest")
 async def list_all(event):
-    ultroid_bot = event.client
+    ALPHA_bot = event.client
     x = await event.eor(get_string("com_1"))
     channels = get_destinations()
     num = get_no_destinations()
@@ -215,7 +215,7 @@ async def list_all(event):
     for channel in channels:
         name = ""
         try:
-            name = get_display_name(await ultroid_bot.get_entity(int(channel)))
+            name = get_display_name(await ALPHA_bot.get_entity(int(channel)))
         except BaseException:
             name = ""
         msg += f"\n=> **{name}** [`{channel}`]"
@@ -224,7 +224,7 @@ async def list_all(event):
         MSG = msg.replace("*", "").replace("`", "")
         with io.BytesIO(str.encode(MSG)) as out_file:
             out_file.name = "channels.txt"
-            await ultroid_bot.send_file(
+            await ALPHA_bot.send_file(
                 event.chat_id,
                 out_file,
                 force_document=True,
@@ -238,4 +238,4 @@ async def list_all(event):
 
 
 if udB.get_key("AUTOPOST"):
-    ultroid_bot.add_handler(autopost_func, events.NewMessage())
+    ALPHA_bot.add_handler(autopost_func, events.NewMessage())

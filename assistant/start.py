@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from datetime import datetime
 
@@ -29,7 +29,7 @@ if Owner_info_msg is None:
 
 **Message Forwards** - {udB.get_key("PMBOT")}
 
-**Ultroid [v{ultroid_version}](https://github.com/Cultured_Heaven/Ultroid), powered by @Cultured_Heaven**
+**ALPHA [v{ALPHA_version}](https://github.com/Cultured_Heaven/ALPHA), powered by @Cultured_Heaven**
 """
 
 
@@ -65,7 +65,7 @@ _start = [
 @callback("ownerinfo")
 async def own(event):
     msg = Owner_info_msg.format(
-        mention=event.sender.mention, me=inline_mention(ultroid_bot.me)
+        mention=event.sender.mention, me=inline_mention(ALPHA_bot.me)
     )
     if custom_info:
         msg += "\n\n• Powered by **@Cultured_Heaven**"
@@ -85,7 +85,7 @@ async def closet(lol):
 
 
 @asst_cmd(pattern="start( (.*)|$)", forwards=False, func=lambda x: not x.is_group)
-async def ultroid(event):
+async def ALPHA(event):
     args = event.pattern_match.group(1).strip()
     if not is_added(event.sender_id) and event.sender_id not in owner_and_sudos():
         add_user(event.sender_id)
@@ -104,7 +104,7 @@ async def ultroid(event):
             )
     if event.sender_id not in SUDO_M.fullsudos:
         ok = ""
-        me = inline_mention(ultroid_bot.me)
+        me = inline_mention(ALPHA_bot.me)
         mention = inline_mention(event.sender)
         if args and args != "set":
             await get_stored_file(event, args)
@@ -112,7 +112,7 @@ async def ultroid(event):
             if udB.get_key("PMBOT"):
                 ok = "You can contact my master using this bot!!\n\nSend your Message, I will Deliver it To Master."
             await event.reply(
-                f"Hey there {mention}, this is Ultroid Assistant of {me}!\n\n{ok}",
+                f"Hey there {mention}, this is ALPHA Assistant of {me}!\n\n{ok}",
                 file=udB.get_key("STARTMEDIA"),
                 buttons=[Button.inline("Info.", data="ownerinfo")]
                 if Owner_info_msg
@@ -149,7 +149,7 @@ async def ekekdhdb(e):
 
 
 @callback("mainmenu", owner=True, func=lambda x: not x.is_group)
-async def ultroid(event):
+async def ALPHA(event):
     await event.edit(
         get_string("ast_3").format(OWNER_NAME),
         buttons=_start,
@@ -159,7 +159,7 @@ async def ultroid(event):
 @callback("stat", owner=True)
 async def botstat(event):
     ok = len(get_all_users("BOT_USERS"))
-    msg = """Ultroid Assistant - Stats
+    msg = """ALPHA Assistant - Stats
 Total Users - {}""".format(
         ok,
     )

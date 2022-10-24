@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 import asyncio
 
@@ -24,11 +24,11 @@ try:
     from ProfanityDetector import detector
 except ImportError:
     detector = None
-from . import LOG_CHANNEL, LOGS, asst, get_string, types, udB, ultroid_bot
+from . import LOG_CHANNEL, LOGS, asst, get_string, types, udB, ALPHA_bot
 from ._inline import something
 
 
-@ultroid_bot.on(events.ChatAction())
+@ALPHA_bot.on(events.ChatAction())
 async def Function(event):
     try:
         await DummyHandler(event)
@@ -62,12 +62,12 @@ async def DummyHandler(ult):
         if not user.bot:
             joinchat = get_forcesetting(ult.chat_id)
             try:
-                await ultroid_bot(GetParticipantRequest(int(joinchat), user.id))
+                await ALPHA_bot(GetParticipantRequest(int(joinchat), user.id))
             except UserNotParticipantError:
-                await ultroid_bot.edit_permissions(
+                await ALPHA_bot.edit_permissions(
                     ult.chat_id, user.id, send_messages=False
                 )
-                res = await ultroid_bot.inline_query(
+                res = await ALPHA_bot.inline_query(
                     asst.me.username, f"fsub {user.id}_{joinchat}"
                 )
                 await res[0].click(ult.chat_id, reply_to=ult.action_message.id)
@@ -75,11 +75,11 @@ async def DummyHandler(ult):
     if ult.user_joined or ult.added_by:
         user = await ult.get_user()
         chat = await ult.get_chat()
-        # gbans and @UltroidBans checks
-        if udB.get_key("ULTROID_BANS"):
+        # gbans and @ALPHABans checks
+        if udB.get_key("ALPHA_BANS"):
             try:
                 is_banned = await async_searcher(
-                    "https://bans.ultroid.tech/api/status",
+                    "https://bans.ALPHA.tech/api/status",
                     json={"userId": user.id},
                     post=True,
                     re_json=True,
@@ -92,7 +92,7 @@ async def DummyHandler(ult):
                     )
                     await ult.client.send_message(
                         chat.id,
-                        f'**@UltroidBans:** Banned user detected and banned!\n`{str(is_banned)}`.\nBan reason: {is_banned["reason"]}',
+                        f'**@ALPHABans:** Banned user detected and banned!\n`{str(is_banned)}`.\nBan reason: {is_banned["reason"]}',
                     )
 
             except BaseException:
@@ -193,7 +193,7 @@ async def DummyHandler(ult):
             await ult.reply(file=med)
 
 
-@ultroid_bot.on(events.NewMessage(incoming=True))
+@ALPHA_bot.on(events.NewMessage(incoming=True))
 async def chatBot_replies(e):
     sender = await e.get_sender()
     if not isinstance(sender, types.User):
@@ -218,7 +218,7 @@ async def chatBot_replies(e):
             await e.delete()
 
 
-@ultroid_bot.on(events.Raw(types.UpdateUserName))
+@ALPHA_bot.on(events.Raw(types.UpdateUserName))
 async def uname_change(e):
     await uname_stuff(e.user_id, e.username, e.first_name)
 

@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from . import get_help
 
@@ -15,7 +15,7 @@ from telethon.tl.types import Channel
 from AlphaOP.dB import autoban_db, dnd_db
 from AlphaOP.fns.admins import get_update_linked_chat
 
-from . import LOGS, asst, get_string, inline_mention, ultroid_bot, ultroid_cmd
+from . import LOGS, asst, get_string, inline_mention, ALPHA_bot, ALPHA_cmd
 
 
 async def dnd_func(event):
@@ -49,7 +49,7 @@ async def channel_del(event):
     await event.try_delete()
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="autokick (on|off)$",
     admins_only=True,
     manager=True,
@@ -73,7 +73,7 @@ async def _(event):
         await event.eor("`Do not disturb mode deactivated for this chat.`", time=3)
 
 
-@ultroid_cmd(pattern="cban$", admins_only=True)
+@ALPHA_cmd(pattern="cban$", admins_only=True)
 async def ban_cha(ult):
     if autoban_db.is_autoban_enabled(ult.chat_id):
         autoban_db.del_channel(ult.chat_id)
@@ -95,7 +95,7 @@ async def ban_cha(ult):
     )
 
 
-@ultroid_cmd(pattern="(list|add|rem)wl( (.*)|$)")
+@ALPHA_cmd(pattern="(list|add|rem)wl( (.*)|$)")
 async def do_magic(event):
     match = event.pattern_match.group(1)
     msg = await event.eor(get_string("com_1"))
@@ -130,11 +130,11 @@ async def do_magic(event):
 
 
 if dnd_db.get_dnd_chats():
-    ultroid_bot.add_handler(dnd_func, events.ChatAction(func=lambda x: x.user_joined))
+    ALPHA_bot.add_handler(dnd_func, events.ChatAction(func=lambda x: x.user_joined))
     asst.add_handler(dnd_func, events.ChatAction(func=lambda x: x.user_joined))
 
 if autoban_db.get_all_channels():
-    ultroid_bot.add_handler(
+    ALPHA_bot.add_handler(
         channel_del,
         events.NewMessage(
             func=lambda x: not x.is_private and isinstance(x.sender, Channel)

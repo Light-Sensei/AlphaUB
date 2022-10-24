@@ -1,7 +1,7 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
@@ -106,13 +106,13 @@ class _BaseDatabase:
 
 
 class MongoDB(_BaseDatabase):
-    def __init__(self, key, dbname="UltroidDB"):
+    def __init__(self, key, dbname="ALPHADB"):
         self.dB = MongoClient(key, serverSelectionTimeoutMS=5000)
         self.db = self.dB[dbname]
         super().__init__()
 
     def __repr__(self):
-        return f"<Ultroid.MonGoDB\n -total_keys: {len(self.keys())}\n>"
+        return f"<ALPHA.MonGoDB\n -total_keys: {len(self.keys())}\n>"
 
     @property
     def name(self):
@@ -145,7 +145,7 @@ class MongoDB(_BaseDatabase):
             return x["value"]
 
     def flushall(self):
-        self.dB.drop_database("UltroidDB")
+        self.dB.drop_database("ALPHADB")
         self._cache.clear()
         return True
 
@@ -153,7 +153,7 @@ class MongoDB(_BaseDatabase):
 # --------------------------------------------------------------------------------------------- #
 
 # Thanks to "Akash Pattnaik" / @BLUE-DEVIL1134
-# for SQL Implementation in Ultroid.
+# for SQL Implementation in ALPHA.
 #
 # Please use https://elephantsql.com/ !
 
@@ -168,7 +168,7 @@ class SqlDB(_BaseDatabase):
             self._connection.autocommit = True
             self._cursor = self._connection.cursor()
             self._cursor.execute(
-                "CREATE TABLE IF NOT EXISTS Ultroid (ultroidCli varchar(70))"
+                "CREATE TABLE IF NOT EXISTS ALPHA (ALPHACli varchar(70))"
             )
         except Exception as error:
             LOGS.exception(error)
@@ -185,21 +185,21 @@ class SqlDB(_BaseDatabase):
     @property
     def usage(self):
         self._cursor.execute(
-            "SELECT pg_size_pretty(pg_relation_size('Ultroid')) AS size"
+            "SELECT pg_size_pretty(pg_relation_size('ALPHA')) AS size"
         )
         data = self._cursor.fetchall()
         return int(data[0][0].split()[0])
 
     def keys(self):
         self._cursor.execute(
-            "SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name  = 'ultroid'"
+            "SELECT column_name FROM information_schema.columns WHERE table_schema = 'public' AND table_name  = 'ALPHA'"
         )  # case sensitive
         data = self._cursor.fetchall()
         return [_[0] for _ in data]
 
     def get(self, variable):
         try:
-            self._cursor.execute(f"SELECT {variable} FROM Ultroid")
+            self._cursor.execute(f"SELECT {variable} FROM ALPHA")
         except psycopg2.errors.UndefinedColumn:
             return None
         data = self._cursor.fetchall()
@@ -212,28 +212,28 @@ class SqlDB(_BaseDatabase):
 
     def set(self, key, value):
         try:
-            self._cursor.execute(f"ALTER TABLE Ultroid DROP COLUMN IF EXISTS {key}")
+            self._cursor.execute(f"ALTER TABLE ALPHA DROP COLUMN IF EXISTS {key}")
         except (psycopg2.errors.UndefinedColumn, psycopg2.errors.SyntaxError):
             pass
         except BaseException as er:
             LOGS.exception(er)
         self._cache.update({key: value})
-        self._cursor.execute(f"ALTER TABLE Ultroid ADD {key} TEXT")
-        self._cursor.execute(f"INSERT INTO Ultroid ({key}) values (%s)", (str(value),))
+        self._cursor.execute(f"ALTER TABLE ALPHA ADD {key} TEXT")
+        self._cursor.execute(f"INSERT INTO ALPHA ({key}) values (%s)", (str(value),))
         return True
 
     def delete(self, key):
         try:
-            self._cursor.execute(f"ALTER TABLE Ultroid DROP COLUMN {key}")
+            self._cursor.execute(f"ALTER TABLE ALPHA DROP COLUMN {key}")
         except psycopg2.errors.UndefinedColumn:
             return False
         return True
 
     def flushall(self):
         self._cache.clear()
-        self._cursor.execute("DROP TABLE Ultroid")
+        self._cursor.execute("DROP TABLE ALPHA")
         self._cursor.execute(
-            "CREATE TABLE IF NOT EXISTS Ultroid (ultroidCli varchar(70))"
+            "CREATE TABLE IF NOT EXISTS ALPHA (ALPHACli varchar(70))"
         )
         return True
 
@@ -302,17 +302,17 @@ class RedisDB(_BaseDatabase):
 
 class LocalDB(_BaseDatabase):
     def __init__(self):
-        self.db = Database("ultroid")
+        self.db = Database("ALPHA")
         super().__init__()
 
     def keys(self):
         return self._cache.keys()
 
     def __repr__(self):
-        return f"<Ultroid.LocalDB\n -total_keys: {len(self.keys())}\n>"
+        return f"<ALPHA.LocalDB\n -total_keys: {len(self.keys())}\n>"
 
 
-def UltroidDB():
+def ALPHADB():
     _er = False
     from .. import HOSTED_ON
     try:

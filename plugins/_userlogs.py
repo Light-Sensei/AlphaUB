@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 import os
 import re
@@ -32,14 +32,14 @@ from . import (
     get_string,
     inline_mention,
     udB,
-    ultroid_bot,
+    ALPHA_bot,
 )
 
 CACHE_SPAM = {}
 TAG_EDITS = {}
 
 
-@ultroid_bot.on(
+@ALPHA_bot.on(
     events.NewMessage(
         incoming=True,
         func=lambda e: (e.mentioned),
@@ -114,7 +114,7 @@ async def all_messages_catcher(e):
 
 if udB.get_key("TAG_LOG"):
 
-    @ultroid_bot.on(events.MessageEdited(func=lambda x: not x.out))
+    @ALPHA_bot.on(events.MessageEdited(func=lambda x: not x.out))
     async def upd_edits(event):
         x = event.sender
         if isinstance(x, User) and (x.bot or x.verified):
@@ -185,7 +185,7 @@ if udB.get_key("TAG_LOG"):
         except Exception as er:
             LOGS.exception(er)
 
-    @ultroid_bot.on(
+    @ALPHA_bot.on(
         events.NewMessage(
             outgoing=True,
             chats=[udB.get_key("TAG_LOG")],
@@ -197,7 +197,7 @@ if udB.get_key("TAG_LOG"):
         chat, msg = who_tag(id)
         if chat and msg:
             try:
-                await ultroid_bot.send_message(chat, e.message, reply_to=msg)
+                await ALPHA_bot.send_message(chat, e.message, reply_to=msg)
             except BaseException as er:
                 LOGS.exception(er)
 
@@ -231,18 +231,18 @@ async def when_added_or_joined(event):
 asst.add_event_handler(
     when_added_or_joined, events.ChatAction(func=lambda x: x.user_added)
 )
-ultroid_bot.add_event_handler(
+ALPHA_bot.add_event_handler(
     when_added_or_joined,
     events.ChatAction(func=lambda x: x.user_added or x.user_joined),
 )
-_client = {"bot": asst, "user": ultroid_bot}
+_client = {"bot": asst, "user": ALPHA_bot}
 
 
 @callback(
     re.compile(
         "leave_ch_(.*)",
     ),
-    from_users=[ultroid_bot.uid],
+    from_users=[ALPHA_bot.uid],
 )
 async def leave_ch_at(event):
     cht = event.data_match.group(1).decode("UTF-8")

@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from telethon.errors import (
     BotMethodInvalidError,
@@ -11,29 +11,29 @@ from telethon.errors import (
     ChatSendMediaForbiddenError,
 )
 
-from . import LOG_CHANNEL, LOGS, Button, asst, eor, get_string, ultroid_cmd
+from . import LOG_CHANNEL, LOGS, Button, asst, eor, get_string, ALPHA_cmd
 
 REPOMSG = """
-• **ULTROID USERBOT** •\n
-• Repo - [Click Here](https://github.com/Cultured_Heaven/Ultroid)
-• Addons - [Click Here](https://github.com/Cultured_Heaven/UltroidAddons)
-• Support - @UltroidSupportChat
+• **ALPHA USERBOT** •\n
+• Repo - [Click Here](https://github.com/Cultured_Heaven/ALPHA)
+• Addons - [Click Here](https://github.com/Cultured_Heaven/ALPHAAddons)
+• Support - @ALPHASupportChat
 """
 
 RP_BUTTONS = [
     [
-        Button.url(get_string("bot_3"), "https://github.com/Cultured_Heaven/Ultroid"),
-        Button.url("Addons", "https://github.com/Cultured_Heaven/UltroidAddons"),
+        Button.url(get_string("bot_3"), "https://github.com/Cultured_Heaven/ALPHA"),
+        Button.url("Addons", "https://github.com/Cultured_Heaven/ALPHAAddons"),
     ],
-    [Button.url("Support Group", "t.me/UltroidSupportChat")],
+    [Button.url("Support Group", "t.me/ALPHASupportChat")],
 ]
 
-ULTSTRING = """🎇 **Thanks for Deploying Ultroid Userbot!**
+ULTSTRING = """🎇 **Thanks for Deploying ALPHA Userbot!**
 
 • Here, are the Some Basic stuff from, where you can Know, about its Usage."""
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="repo$",
     manager=True,
 )
@@ -53,8 +53,8 @@ async def repify(e):
     await e.eor(REPOMSG)
 
 
-@ultroid_cmd(pattern="ultroid$")
-async def useUltroid(rs):
+@ALPHA_cmd(pattern="ALPHA$")
+async def useALPHA(rs):
     button = Button.inline("Start >>", "initft_2")
     msg = await asst.send_message(
         LOG_CHANNEL,

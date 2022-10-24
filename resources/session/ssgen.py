@@ -1,15 +1,15 @@
 #!/usr/bin/python3
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 import os
 from time import sleep
 
-ULTROID = r"""
+ALPHA = r"""
   _    _ _ _             _     _
  | |  | | | |           (_)   | |
  | |  | | | |_ _ __ ___  _  __| |
@@ -63,7 +63,7 @@ def telethon_session():
 
         x = "\bDone. Installed and imported Telethon."
     clear_screen()
-    print(ULTROID)
+    print(ALPHA)
     print(x)
 
     # the imports
@@ -80,12 +80,12 @@ def telethon_session():
 
     # logging in
     try:
-        with TelegramClient(StringSession(), API_ID, API_HASH) as ultroid:
-            print("Generating a string session for •ULTROID•")
+        with TelegramClient(StringSession(), API_ID, API_HASH) as ALPHA:
+            print("Generating a string session for •ALPHA•")
             try:
-                ultroid.send_message(
+                ALPHA.send_message(
                     "me",
-                    f"**ULTROID** `SESSION`:\n\n`{ultroid.session.save()}`\n\n**Do not share this anywhere!**",
+                    f"**ALPHA** `SESSION`:\n\n`{ALPHA.session.save()}`\n\n**Do not share this anywhere!**",
                 )
                 print(
                     "Your SESSION has been generated. Check your Telegram saved messages!"
@@ -93,7 +93,7 @@ def telethon_session():
                 return
             except UserIsBotError:
                 print("You are trying to Generate Session for your Bot's Account?")
-                print("Here is That!\n{ultroid.session.save()}\n\n")
+                print("Here is That!\n{ALPHA.session.save()}\n\n")
                 print("NOTE: You can't use that as User Session..")
     except ApiIdInvalidError:
         print(
@@ -109,7 +109,7 @@ def telethon_session():
     except Exception as er:
         print("Unexpected Error Occurred while Creating Session")
         print(er)
-        print("If you think It as a Bug, Report to @UltroidSupportChat.\n\n")
+        print("If you think It as a Bug, Report to @ALPHASupportChat.\n\n")
 
 
 def pyro_session():
@@ -123,7 +123,7 @@ def pyro_session():
         os.system("pip install pyrogram tgcrypto")
         x = "\bDone. Installed and imported Pyrogram."
     clear_screen()
-    print(ULTROID)
+    print(ALPHA)
     print(x)
 
     # generate a session
@@ -133,7 +133,7 @@ def pyro_session():
         ss = pyro.export_session_string()
         pyro.send_message(
             "me",
-            f"`{ss}`\n\nAbove is your Pyrogram Session String for @TheUltroid. **DO NOT SHARE it.**",
+            f"`{ss}`\n\nAbove is your Pyrogram Session String for @TheALPHA. **DO NOT SHARE it.**",
         )
         print("Session has been sent to your saved messages!")
         exit(0)
@@ -141,11 +141,11 @@ def pyro_session():
 
 def main():
     clear_screen()
-    print(ULTROID)
+    print(ALPHA)
     try:
         type_of_ss = int(
             input(
-                "\nUltroid supports both telethon as well as pyrogram sessions.\n\nWhich session do you want to generate?\n1. Telethon Session.\n2. Pyrogram Session.\n\nEnter choice:  "
+                "\nALPHA supports both telethon as well as pyrogram sessions.\n\nWhich session do you want to generate?\n1. Telethon Session.\n2. Pyrogram Session.\n\nEnter choice:  "
             )
         )
     except Exception as e:

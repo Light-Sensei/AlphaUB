@@ -1,7 +1,7 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
@@ -41,9 +41,9 @@ if run_as_module:
     from telethon.tl.alltlobjects import LAYER
 
     from ..version import __version__ as __AlphaOP__
-    from ..version import ultroid_version
+    from ..version import ALPHA_version
 
-    file = f"ultroid{sys.argv[6]}.log" if len(sys.argv) > 6 else "ultroid.log"
+    file = f"ALPHA{sys.argv[6]}.log" if len(sys.argv) > 6 else "ALPHA.log"
 
     if os.path.exists(file):
         os.remove(file)
@@ -89,9 +89,9 @@ if run_as_module:
     )
 
     LOGS.info(f"Python version - {platform.python_version()}")
-    LOGS.info(f"py-Ultroid Version - {__AlphaOP__}")
+    LOGS.info(f"py-ALPHA Version - {__AlphaOP__}")
     LOGS.info(f"Telethon Version - {__version__} [Layer: {LAYER}]")
-    LOGS.info(f"Ultroid Version - {ultroid_version} [{HOSTED_ON}]")
+    LOGS.info(f"ALPHA Version - {ALPHA_version} [{HOSTED_ON}]")
 
     try:
         from safety.tools import *

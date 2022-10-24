@@ -1,7 +1,7 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
@@ -407,11 +407,11 @@ async def get_paste(data: str, extension: str = "txt"):
 
 
 async def get_chatbot_reply(message):
-    from .. import ultroid_bot
+    from .. import ALPHA_bot
 
-    chatbot_base = "https://kukiapi.xyz/api/apikey=ULTROIDUSERBOT/Ultroid/{}/message={}"
+    chatbot_base = "https://kukiapi.xyz/api/apikey=ALPHAUSERBOT/ALPHA/{}/message={}"
     req_link = chatbot_base.format(
-        ultroid_bot.me.first_name or "ultroid user",
+        ALPHA_bot.me.first_name or "ALPHA user",
         message,
     )
     try:
@@ -516,18 +516,18 @@ def telegraph_client():
     if TELEGRAPH:
         return TELEGRAPH[0]
 
-    from .. import udB, ultroid_bot
+    from .. import udB, ALPHA_bot
 
     token = udB.get_key("_TELEGRAPH_TOKEN")
     TelegraphClient = Telegraph(token)
     if token:
         TELEGRAPH.append(TelegraphClient)
         return TelegraphClient
-    gd_name = ultroid_bot.full_name
+    gd_name = ALPHA_bot.full_name
     short_name = gd_name[:30]
     profile_url = (
-        f"https://t.me/{ultroid_bot.me.username}"
-        if ultroid_bot.me.username
+        f"https://t.me/{ALPHA_bot.me.username}"
+        if ALPHA_bot.me.username
         else "https://t.me/Cultured_Heaven"
     )
     try:
@@ -537,7 +537,7 @@ def telegraph_client():
     except Exception as er:
         if "SHORT_NAME_TOO_LONG" in str(er):
             TelegraphClient.create_account(
-                short_name="ultroiduser", author_name=gd_name, author_url=profile_url
+                short_name="ALPHAuser", author_name=gd_name, author_url=profile_url
             )
         else:
             LOGS.exception(er)
@@ -560,7 +560,7 @@ def make_html_telegraph(title, html=""):
 async def Carbon(
     code,
     base_url="https://carbonara-42.herokuapp.com/api/cook",
-    file_name="ultroid",
+    file_name="ALPHA",
     download=False,
     rayso=False,
     **kwargs,
@@ -570,7 +570,7 @@ async def Carbon(
         kwargs["text"] = code
         kwargs["theme"] = kwargs.get("theme", "meadow")
         kwargs["darkMode"] = kwargs.get("darkMode", True)
-        kwargs["title"] = kwargs.get("title", "Ultroid")
+        kwargs["title"] = kwargs.get("title", "ALPHA")
     else:
         kwargs["code"] = code
     con = await async_searcher(base_url, post=True, json=kwargs, re_content=True)

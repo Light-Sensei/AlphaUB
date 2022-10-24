@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -30,10 +30,10 @@ from PIL import Image
 from telethon.tl.types import MessageMediaDocument as doc
 from telethon.tl.types import MessageMediaPhoto as photu
 
-from . import check_filename, get_string, ultroid_bot, ultroid_cmd
+from . import check_filename, get_string, ALPHA_bot, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="qrcode( (.*)|$)")
+@ALPHA_cmd(pattern="qrcode( (.*)|$)")
 async def cd(e):
     reply = await e.get_reply_message()
     msg = e.pattern_match.group(1).strip()
@@ -44,8 +44,8 @@ async def cd(e):
     default, cimg = ULTConfig.thumb, None
     if reply and (reply.sticker or reply.photo):
         cimg = await reply.download_media()
-    elif ultroid_bot.me.photo and not ultroid_bot.me.photo.has_video:
-        cimg = await e.client.get_profile_photos(ultroid_bot.uid, limit=1)[0]
+    elif ALPHA_bot.me.photo and not ALPHA_bot.me.photo.has_video:
+        cimg = await e.client.get_profile_photos(ALPHA_bot.uid, limit=1)[0]
 
     kk = await e.eor(get_string("com_1"))
     img = cimg or default
@@ -66,7 +66,7 @@ async def cd(e):
         os.remove(cimg)
 
 
-@ultroid_cmd(pattern="addqr( (.*)|$)")
+@ALPHA_cmd(pattern="addqr( (.*)|$)")
 async def qrwater(e):
     msg = e.pattern_match.group(1).strip()
     r = await e.get_reply_message()
@@ -90,7 +90,7 @@ async def qrwater(e):
     os.remove(dl)
 
 
-@ultroid_cmd(pattern="qrdecode$")
+@ALPHA_cmd(pattern="qrdecode$")
 async def decod(e):
     r = await e.get_reply_message()
     if not (r and r.media):

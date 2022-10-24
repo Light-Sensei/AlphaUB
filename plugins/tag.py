@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -35,10 +35,10 @@ from telethon.tl.types import UserStatusOffline as off
 from telethon.tl.types import UserStatusOnline as onn
 from telethon.tl.types import UserStatusRecently as rec
 
-from . import inline_mention, ultroid_cmd
+from . import inline_mention, ALPHA_cmd
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="tag(on|off|all|bots|rec|admins|owner)( (.*)|$)",
     groups_only=True,
 )

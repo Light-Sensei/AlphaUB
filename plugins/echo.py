@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from . import get_help
 
@@ -14,10 +14,10 @@ from telethon.utils import get_display_name
 
 from AlphaOP.dB.echo_db import add_echo, check_echo, list_echo, rem_echo
 
-from . import LOGS, events, ultroid_bot, ultroid_cmd
+from . import LOGS, events, ALPHA_bot, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="addecho( (.*)|$)")
+@ALPHA_cmd(pattern="addecho( (.*)|$)")
 async def echo(e):
     r = await e.get_reply_message()
     if r:
@@ -40,7 +40,7 @@ async def echo(e):
     await e.eor(f"Activated Echo For {user}.")
 
 
-@ultroid_cmd(pattern="remecho( (.*)|$)")
+@ALPHA_cmd(pattern="remecho( (.*)|$)")
 async def rm(e):
     r = await e.get_reply_message()
     if r:
@@ -63,7 +63,7 @@ async def rm(e):
     await e.eor("Echo not activated for this user")
 
 
-@ultroid_bot.on(events.NewMessage(incoming=True))
+@ALPHA_bot.on(events.NewMessage(incoming=True))
 async def okk(e):
     if check_echo(e.chat_id, e.sender_id):
         try:
@@ -73,7 +73,7 @@ async def okk(e):
             LOGS.info(er)
 
 
-@ultroid_cmd(pattern="listecho$")
+@ALPHA_cmd(pattern="listecho$")
 async def lstecho(e):
     if k := list_echo(e.chat_id):
         user = "**Activated Echo For Users:**\n\n"

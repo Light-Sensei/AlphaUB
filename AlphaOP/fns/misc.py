@@ -1,7 +1,7 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
@@ -69,7 +69,7 @@ except ImportError:
 
 
 async def randomchannel(
-    tochat, channel, range1, range2, caption=None, client=ultroid_bot
+    tochat, channel, range1, range2, caption=None, client=ALPHA_bot
 ):
     do = randrange(range1, range2)
     async for x in client.iter_messages(channel, add_offset=do, limit=1):
@@ -165,8 +165,8 @@ async def allcmds(event, telegraph):
         for zz in LIST[z]:
             txt += HNDLR + zz + "\n"
         txt += "\n\n"
-    t = telegraph.create_page(title="Ultroid All Cmds", content=[txt])
-    await eor(event, f"All Ultroid Cmds : [Click Here]({t['url']})", link_preview=False)
+    t = telegraph.create_page(title="ALPHA All Cmds", content=[txt])
+    await eor(event, f"All ALPHA Cmds : [Click Here]({t['url']})", link_preview=False)
 
 
 async def ReTrieveFile(input_file_name):
@@ -285,8 +285,8 @@ INSTA_CLIENT = []
 
 
 async def _insta_login():
-    if "insta_creds" in ultroid_bot._cache:
-        return ultroid_bot._cache["insta_creds"]
+    if "insta_creds" in ALPHA_bot._cache:
+        return ALPHA_bot._cache["insta_creds"]
     username = udB.get_key("INSTA_USERNAME")
     password = udB.get_key("INSTA_PASSWORD")
     if username and password:
@@ -294,7 +294,7 @@ async def _insta_login():
         cl = Client(settings)
         try:
             cl.login(username, password)
-            ultroid_bot._cache.update({"insta_creds": cl})
+            ALPHA_bot._cache.update({"insta_creds": cl})
         except ManualInputRequired:
             LOGS.exception(format_exc())
             # await get_insta_code(cl, username, password)
@@ -308,14 +308,14 @@ async def _insta_login():
             return False
         udB.set_key("INSTA_SET", str(cl.get_settings()))
         cl.logger.setLevel(WARNING)
-        return ultroid_bot._cache["insta_creds"]
+        return ALPHA_bot._cache["insta_creds"]
     return False
 
 
 async def get_insta_code(username, choice):
-    from .. import asst, ultroid_bot
+    from .. import asst, ALPHA_bot
 
-    async with asst.conversation(ultroid_bot.uid, timeout=60 * 2) as conv:
+    async with asst.conversation(ALPHA_bot.uid, timeout=60 * 2) as conv:
         await conv.send_message(
             "Enter The **Instagram Verification Code** Sent to Your Email.."
         )

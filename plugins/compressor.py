@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from . import get_help
 
@@ -30,12 +30,12 @@ from . import (
     math,
     mediainfo,
     time_formatter,
-    ultroid_cmd,
+    ALPHA_cmd,
     uploader,
 )
 
 
-@ultroid_cmd(pattern="compress( (.*)|$)")
+@ALPHA_cmd(pattern="compress( (.*)|$)")
 async def _(e):
     cr = e.pattern_match.group(1).strip()
     crf = 27

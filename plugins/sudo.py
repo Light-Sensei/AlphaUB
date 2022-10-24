@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -21,10 +21,10 @@ from telethon.tl.types import User
 
 from AlphaOP._misc import sudoers
 
-from . import get_string, inline_mention, udB, ultroid_bot, ultroid_cmd
+from . import get_string, inline_mention, udB, ALPHA_bot, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="addsudo( (.*)|$)", fullsudo=True)
+@ALPHA_cmd(pattern="addsudo( (.*)|$)", fullsudo=True)
 async def _(ult):
     inputs = ult.pattern_match.group(1).strip()
     if ult.reply_to_msg_id:
@@ -51,7 +51,7 @@ async def _(ult):
     if name and isinstance(name, User) and (name.bot or name.verified):
         return await ult.eor(get_string("sudo_4"))
     name = inline_mention(name) if name else f"`{id}`"
-    if id == ultroid_bot.uid:
+    if id == ALPHA_bot.uid:
         mmm = get_string("sudo_2")
     elif id in sudoers():
         mmm = f"{name} `is already a SUDO User ...`"
@@ -64,7 +64,7 @@ async def _(ult):
     await ult.eor(mmm, time=5)
 
 
-@ultroid_cmd(pattern="delsudo( (.*)|$)", fullsudo=True)
+@ALPHA_cmd(pattern="delsudo( (.*)|$)", fullsudo=True)
 async def _(ult):
     inputs = ult.pattern_match.group(1).strip()
     if ult.reply_to_msg_id:
@@ -99,7 +99,7 @@ async def _(ult):
     await ult.eor(mmm, time=5)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="listsudo$",
 )
 async def _(ult):
@@ -118,7 +118,7 @@ async def _(ult):
             msg += f"• `{i}` -> Invalid User\n"
     m = udB.get_key("SUDO") or True
     if not m:
-        m = "[False](https://graph.org/Ultroid-04-06)"
+        m = "[False](https://graph.org/ALPHA-04-06)"
     return await ult.eor(
         f"**SUDO MODE : {m}\n\nList of SUDO Users :**\n{msg}", link_preview=False
     )

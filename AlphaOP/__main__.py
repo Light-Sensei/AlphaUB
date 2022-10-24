@@ -1,7 +1,7 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
@@ -28,22 +28,22 @@ def main():
     if (
         udB.get_key("UPDATE_ON_RESTART")
         and os.path.exists(".git")
-        and ultroid_bot.run_in_loop(updater())
+        and ALPHA_bot.run_in_loop(updater())
     ):
-        ultroid_bot.run_in_loop(bash("bash installer.sh"))
+        ALPHA_bot.run_in_loop(bash("bash installer.sh"))
 
         os.execl(sys.executable, "python3", "-m", "AlphaOP")
 
-    ultroid_bot.run_in_loop(startup_stuff())
+    ALPHA_bot.run_in_loop(startup_stuff())
 
-    ultroid_bot.me.phone = None
+    ALPHA_bot.me.phone = None
 
-    if not ultroid_bot.me.bot:
-        udB.set_key("OWNER_ID", ultroid_bot.uid)
+    if not ALPHA_bot.me.bot:
+        udB.set_key("OWNER_ID", ALPHA_bot.uid)
 
     LOGS.info("Initialising...")
 
-    ultroid_bot.run_in_loop(autopilot())
+    ALPHA_bot.run_in_loop(autopilot())
 
     pmbot = udB.get_key("PMBOT")
     manager = udB.get_key("MANAGER")
@@ -62,26 +62,26 @@ def main():
 
     suc_msg = """
             ----------------------------------------------------------------------
-                Ultroid has been deployed! Visit @TheUltroid for updates!!
+                ALPHA has been deployed! Visit @TheALPHA for updates!!
             ----------------------------------------------------------------------
     """
 
     # for channel plugins
     plugin_channels = udB.get_key("PLUGIN_CHANNEL")
 
-    # Customize Ultroid Assistant...
-    ultroid_bot.run_in_loop(customize())
+    # Customize ALPHA Assistant...
+    ALPHA_bot.run_in_loop(customize())
 
     # Load Addons from Plugin Channels.
     if plugin_channels:
-        ultroid_bot.run_in_loop(plug(plugin_channels))
+        ALPHA_bot.run_in_loop(plug(plugin_channels))
 
     # Send/Ignore Deploy Message..
     if not udB.get_key("LOG_OFF"):
-        ultroid_bot.run_in_loop(ready())
+        ALPHA_bot.run_in_loop(ready())
 
     # Edit Restarting Message (if It's restarting)
-    ultroid_bot.run_in_loop(WasItRestart(udB))
+    ALPHA_bot.run_in_loop(WasItRestart(udB))
 
     try:
         cleanup_cache()
@@ -89,7 +89,7 @@ def main():
         pass
 
     LOGS.info(
-        f"Took {time_formatter((time.time() - start_time)*1000)} to start •ULTROID•"
+        f"Took {time_formatter((time.time() - start_time)*1000)} to start •ALPHA•"
     )
     LOGS.info(suc_msg)
 

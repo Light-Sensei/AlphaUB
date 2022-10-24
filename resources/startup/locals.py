@@ -1,10 +1,10 @@
 # /usr/bin/python3
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # Please read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 # Standalone file for facilitating local deploys.
 
@@ -26,12 +26,12 @@ def start():
     check_for_py()
 
     print(f"{a}\n\n")
-    print("Welcome to Ultroid, lets start setting up!\n\n")
+    print("Welcome to ALPHA, lets start setting up!\n\n")
     print("Cloning the repository...\n\n")
-    os.system("rm -rf Ultroid")
-    os.system("git clone https://github.com/Cultured_Heaven/Ultroid")
+    os.system("rm -rf ALPHA")
+    os.system("git clone https://github.com/Cultured_Heaven/ALPHA")
     print("\n\nDone")
-    os.chdir("Ultroid")
+    os.chdir("ALPHA")
     clear_screen()
     print(a)
     print("\n\nLet's start!\n")
@@ -57,7 +57,7 @@ def start():
         "REDIS_URI",
         "REDIS_PASSWORD",
     ]
-    all_done = "# Ultroid Environment Variables.\n# Do not delete this file.\n\n"
+    all_done = "# ALPHA Environment Variables.\n# Do not delete this file.\n\n"
     for i in varrs:
         all_done += do_input(i)
     clear_screen()
@@ -66,7 +66,7 @@ def start():
     print(all_done)
     isitdone = input("\n\nIs it all correct? [y/n]")
     if isitdone == "y" or isitdone != "n":
-        # https://github.com/Cultured_Heaven/Ultroid/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
+        # https://github.com/Cultured_Heaven/ALPHA/blob/31b9eb1f4f8059e0ae66adb74cb6e8174df12eac/resources/startup/locals.py#L35
         f = open(".env", "w")
         f.write(all_done)
     else:
@@ -84,7 +84,7 @@ def start():
         print("Skipped!")
     clear_screen()
     print(a)
-    print("\nStarting Ultroid...")
+    print("\nStarting ALPHA...")
     os.system("sh startup")
 
 
@@ -123,7 +123,7 @@ def check_for_py():
 
 def gen_session():
     print("\nProcessing...")
-    # https://github.com/Cultured_Heaven/Ultroid/main/resources/startup/locals.py#L35
+    # https://github.com/Cultured_Heaven/ALPHA/main/resources/startup/locals.py#L35
     os.system("python3 resources/session/ssgen.py")
 
 

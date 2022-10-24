@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from telethon import Button, custom
 
@@ -16,8 +16,8 @@ from AlphaOP.fns.helper import *
 from AlphaOP.fns.tools import get_stored_file
 from strings import get_languages, get_string
 
-OWNER_NAME = ultroid_bot.full_name
-OWNER_ID = ultroid_bot.uid
+OWNER_NAME = ALPHA_bot.full_name
+OWNER_ID = ALPHA_bot.uid
 
 AST_PLUGINS = {}
 

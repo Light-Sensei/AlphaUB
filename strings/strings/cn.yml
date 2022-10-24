@@ -20,13 +20,13 @@ autopic_2: "找不到的结果 `{}`"
 autopic_3: "有收藏吗 `{}` 与您的搜索相关 !\n开始自选 !"
 
 # inline
-inline_1: "[Ultroid 帮助](t.me/UltroidSupportChat)\n\n
+inline_1: "[ALPHA 帮助](t.me/ALPHASupportChat)\n\n
 **帮助菜单 {}.\n\n
 插件 ~ {}**"
-inline_2: "[Ultroid 帮助](t.me/UltroidSupportChat)\n\n
+inline_2: "[ALPHA 帮助](t.me/ALPHASupportChat)\n\n
 **帮助菜单 {}.\n\n
 附加组件 ~ {}**"
-inline_3: "[Ultroid 帮助](t.me/UltroidSupportChat)\n\n
+inline_3: "[ALPHA 帮助](t.me/ALPHASupportChat)\n\n
 **帮助菜单 {}.\n\n
 附加组件 ~ {}\n\n
 去添加 `附加组件` var为true的值**"
@@ -50,7 +50,7 @@ afk_5: "`去 AFK.`\n\n**原因:** `{}`"
 afk_6: "我要去 AFK."
 
 # bot
-alive_1: "**Ultroid 用户机器人...**\n\n
+alive_1: "**ALPHA 用户机器人...**\n\n
 **{}**\n\n
 ┏━━━━━━━━━━━━━━━━━━━━━\n
 ┣ **所有者** - `{}`\n
@@ -61,7 +61,7 @@ alive_1: "**Ultroid 用户机器人...**\n\n
 ┣ **Telethon** - `{}`\n
 ┣ **分支** - `{}`\n
 ┗━━━━━━━━━━━━━━━━━━━━━"
-log: "**Heroku** Ultroid 日志.\n粘贴 [here]({}) too!"
+log: "**Heroku** ALPHA 日志.\n粘贴 [here]({}) too!"
 ping: "**Pong !!** `{}毫秒`\n**Uptime** - `{}`"
 usage: "**⚙️ Dyno 用法 ⚙️**:\n\n
  -> `Dyno 用法 for`  **{}**:\n
@@ -140,10 +140,10 @@ sf_14: "SuperFBan 已完成.\n总计 Feds - {}.\n不包括 - {}.\n 受影响的 
 sf_15: "启动 Mass-UnFedBan..."
 sf_16: "SuperUnFBan 已完成.\n总计 Feds - {}.\n不包括 - {}.\n 受影响的 {} feds.\n#TB"
 sf_17: "`给我一个ID, 或者回复某人的信息查看他/她的 fedstat.`"
-sf_18: "列表 feds {} 已被禁止.\n\n使用Ultroid收集."
+sf_18: "列表 feds {} 已被禁止.\n\n使用ALPHA收集."
 sf_19: "**错误**\n `Unblock` @MissRose_Bot ` 再试一次!"
 sf_20: "`提取信息中...`"
-sf_21: "\n\n由Ultroid提取的FedInfo"
+sf_21: "\n\n由ALPHA提取的FedInfo"
 
 # gdrive
 gdrive_1: "`你已经授权过 Google Drive`"
@@ -151,7 +151,7 @@ gdrive_2: "去 [这里](https://console.developers.google.com/flows/enableapi?ap
 发送你的 GDRIVE_CLIENT_ID 和 GDRIVE_CLIENT_SECRET 到这里.\n`GDRIVE_CLIENT_ID GDRIVE_CLIENT_SECRET` 用空格分开."
 gdrive_3: "`错误的 Client Id`"
 gdrive_4: "`发生了一些错误! 再次发送 `/auth`.\n如果发生同样的问题请联系 `@Cultured_Heaven"
-gdrive_5: "`成功!\n你已经在 Ultroid 用户机器人 上设置好了 Google Drive.`"
+gdrive_5: "`成功!\n你已经在 ALPHA 用户机器人 上设置好了 Google Drive.`"
 gdrive_6: "`去 `{}` 并发送 ``/auth.`"
 gdrive_7: "**文件成功上传到 G-Drive :**\n\n[{}]({})"
 
@@ -227,10 +227,10 @@ wrd_4: "`Give a Word to Find Its Meaning..`"
 help_blacklist: "-\n\n• `{i}blacklist <word/all words with a space>`\n    blacklist the choosen word in that chat.\n\n• `{i}remblacklist <word>`\n    Remove the word from blacklist..\n\n• `{i}listblacklist`\n    list all blacklisted words.\n\n  'if a person uses blacklist Word his/her msg will be deleted'\n  'And u Must be Admin in that Chat'"
 vct_1: "`Voice Chat Started...`"
 vcbot_5: "`Re-joining this voice chat.`"
-calc_1: "• Ultroid Inline Calculator •"
+calc_1: "• ALPHA Inline Calculator •"
 autopic_4: "AUTOPIC was not in use !!"
 ascii_2: "`Converting to html...`"
-help_bot: "• `{i}alive` | `{i}alive inline`\n    Check if your bot is working.\n\n• `{i}ping`\n    Check Ultroid's response time.\n\n• `{i}update`\n    See changelogs if any update is available.\n\n• `{i}cmds`\n    View all plugin names.\n\n• `{i}restart`\n    To restart your bot.\n\n• `{i}logs (sys)`\n    Get the full terminal logs.\n• `{i}logs carbon`\n    Get the carbonized sys logs.\n• `{i}logs heroku`\n   Get the latest 100 lines of heroku logs.\n\n• `{i}shutdown`\n    Turn off your bot."
+help_bot: "• `{i}alive` | `{i}alive inline`\n    Check if your bot is working.\n\n• `{i}ping`\n    Check ALPHA's response time.\n\n• `{i}update`\n    See changelogs if any update is available.\n\n• `{i}cmds`\n    View all plugin names.\n\n• `{i}restart`\n    To restart your bot.\n\n• `{i}logs (sys)`\n    Get the full terminal logs.\n• `{i}logs carbon`\n    Get the carbonized sys logs.\n• `{i}logs heroku`\n   Get the latest 100 lines of heroku logs.\n\n• `{i}shutdown`\n    Turn off your bot."
 ascii_1: "`Reply to image.`"
 sts_2: "`Reply to an Animated Sticker...`"
 ban_4: "{} **was banned by** {} **in** `{}`"
@@ -263,7 +263,7 @@ help_autoban: "• `{i}autokick <on/off>`\n    on - To enable.\n    off - To dis
 can_2: "∆ #UsernameUpdate\n\n@{} changed username to @{}"
 aki_1: "Game has been Terminated...."
 youtube_8: "`Downloading video song...`"
-help_button: "-\n\n• `{i}button <text with button format`\n   create button u can reply to pic also\n\nFormat:- `{i}button Hey There! @UseUltroid 😎.\n[Ultroid | t.me/theUltroid][Support | t.me/UltroidSupportChat | same]\n[Cultured_Heaven | t.me/Cultured_Heaven]`"
+help_button: "-\n\n• `{i}button <text with button format`\n   create button u can reply to pic also\n\nFormat:- `{i}button Hey There! @UseALPHA 😎.\n[ALPHA | t.me/theALPHA][Support | t.me/ALPHASupportChat | same]\n[Cultured_Heaven | t.me/Cultured_Heaven]`"
 bot_1: "Hey,  I am alive."
 youtube_7: "Give me a (youtube) search query to download video from!"
 com_5: "Downloading..."
@@ -367,7 +367,7 @@ glitch_1: "`Glitching...`"
 userlogs_3: "Leave Chat"
 antiflood_3: "`You have been muted.`"
 echo_1: "**Activated Echo For Users:**"
-help_database: "-\n\n• **DataBase Commands, do not use if you don't know what it is.**\n\n• `{i}setdb key | value`\n    Set Value in Database.\n    e.g :\n    `{i}setdb hi there`\n    `{i}setdb hi there | ultroid here`\n    `{i}setdb --extend variable value` or `{i}setdb -e variable value` to add the value to the exiting values in db.\n\n• `{i}deldb key`\n    Delete Key from DB.\n\n• `{i}rendb old keyname | new keyname`\n    Update Key Name"
+help_database: "-\n\n• **DataBase Commands, do not use if you don't know what it is.**\n\n• `{i}setdb key | value`\n    Set Value in Database.\n    e.g :\n    `{i}setdb hi there`\n    `{i}setdb hi there | ALPHA here`\n    `{i}setdb --extend variable value` or `{i}setdb -e variable value` to add the value to the exiting values in db.\n\n• `{i}deldb key`\n    Delete Key from DB.\n\n• `{i}rendb old keyname | new keyname`\n    Update Key Name"
 help_admintools: "-\n\n• `.promote <reply to user/userid/username>`\n• `.demote`\n    Promote/Demote the user in the chat.\n\n• `.ban <reply to user/userid/username> <reason>`\n• `.unban`\n    Ban/Unban the user from the chat.\n\n• `.kick <reply to user/userid/username> <reason>`\n    Kick the user from the chat.\n\n• `.pin <reply to message>`\n    Pin the message in the chat\n• `.tpin <time> <temp pin message>`\n• `.unpin (all) <reply to message>`\n    Unpin the messages in the chat.\n\n• `.pinned`\n   Get pinned message in the current chat.\n• `.listpinned`\n   Get all pinned messages in current chat\n\n• `.autodelete <24h/7d/1m/off>`\n   Enable Auto Delete Messages in Chat.\n\n• `.purge <reply to message>`\n    Purge all messages from the replied message.\n\n• `.purgeme <reply to message>`\n    Purge Only your messages from the replied message.\n\n• `.purgeall`\n    Delete all msgs of replied user."
 help_4: "• Plugins"
 vcbot_3: "• Volume Changed to `{}%` •"

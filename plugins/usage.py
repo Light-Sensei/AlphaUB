@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available
 
@@ -31,7 +31,7 @@ from . import (
     get_string,
     humanbytes,
     udB,
-    ultroid_cmd,
+    ALPHA_cmd,
 )
 
 HEROKU_API = None
@@ -51,7 +51,7 @@ if HOSTED_ON == "heroku":
         LOGS.exception(er)
 
 
-@ultroid_cmd(pattern="usage")
+@ALPHA_cmd(pattern="usage")
 async def usage_finder(event):
     x = await event.eor(get_string("com_1"))
     try:

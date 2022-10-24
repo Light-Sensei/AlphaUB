@@ -1,10 +1,10 @@
 # /usr/bin/python3
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # Please read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from os import system, path
 from time import sleep
@@ -18,7 +18,7 @@ def clear():
 
 MANDATORY_REQS = [
     "https://github.com/New-dev0/Telethon/archive/Cartoon.zip",
-    "py-Ultroid==2022.6.6",
+    "py-ALPHA==2022.6.6",
     "gitpython",
     "enhancer==0.3.4",
     "telegraph",
@@ -59,7 +59,7 @@ INFO_TEXT = f"""
 2. You can install that requirement whenever you want with 'pip install' (a very basic python+bash knowledge is required.)
 
 3. Some of the plugins are disabled for 'Termux Users' to save resources (by adding in EXCLUDE_OFFICIAL).
-   - Read More - https://t.me/UltroidUpdates/36
+   - Read More - https://t.me/ALPHAUpdates/36
    - Also, way to enable the disabled plugins is mentioned in that post.
 
    # Disabled Plugins Name
@@ -187,8 +187,8 @@ print(
 █       █       █ █   █ █   █  █ █       █   █       █
 █▄▄▄▄▄▄▄█▄▄▄▄▄▄▄█ █▄▄▄█ █▄▄▄█  █▄█▄▄▄▄▄▄▄█▄▄▄█▄▄▄▄▄▄█ 
 {Style.RESET_ALL}
-{Fore.GREEN}- ULTROID Termux Installation -
-  The Main Aim of this script is to deploy Ultroid with basic requirements and save your phone resources.
+{Fore.GREEN}- ALPHA Termux Installation -
+  The Main Aim of this script is to deploy ALPHA with basic requirements and save your phone resources.
 {Fore.RESET}
 
 {COPYRIGHT}
@@ -235,7 +235,7 @@ Enter [ A = Ask for each, I = Install all, S = Skip, E = Exit]"""
 ask_and_wait_opt()
 
 print(f"\n{Fore.RED}#EXTRA Features...\n")
-print(f"{Fore.YELLOW}* Do you want to get Ultroid Logs in Colors? [Y/N] ")
+print(f"{Fore.YELLOW}* Do you want to get ALPHA Logs in Colors? [Y/N] ")
 inp = input("").strip().lower()
 if inp in ["yes", "y"]:
     print(f"{Fore.GREEN}*Spoking the Magical Mantras*")
@@ -250,10 +250,10 @@ if not path.exists(".env"):
 
 print(with_header(f"\n{Fore.GREEN}You are all Done! 🥳"))
 sleep(0.2)
-print(f"Use 'bash startup' to try running Ultroid.{Fore.RESET}")
+print(f"Use 'bash startup' to try running ALPHA.{Fore.RESET}")
 sleep(0.5)
 print(
-    "\nYou can head over to @UltroidSupportChat, if you get stuck somewhere, and need help."
+    "\nYou can head over to @ALPHASupportChat, if you get stuck somewhere, and need help."
 )
 sleep(0.5)
 print("\nMade with ❤️ by @Cultured_Heaven...")

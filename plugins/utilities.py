@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -104,7 +104,7 @@ from . import (
     json_parser,
     mediainfo,
     udB,
-    ultroid_cmd,
+    ALPHA_cmd,
 )
 
 # =================================================================#
@@ -114,13 +114,13 @@ TMP_DOWNLOAD_DIRECTORY = "resources/downloads/"
 _copied_msg = {}
 
 
-@ultroid_cmd(pattern="kickme$", fullsudo=True)
+@ALPHA_cmd(pattern="kickme$", fullsudo=True)
 async def leave(ult):
     await ult.eor(f"`{ult.client.me.first_name} has left this group, bye!!.`")
     await ult.client(LeaveChannelRequest(ult.chat_id))
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="date$",
 )
 async def date(event):
@@ -131,7 +131,7 @@ async def date(event):
     await event.eor(f"`{k}\n\n{d}`")
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="listreserved$",
 )
 async def _(event):
@@ -145,7 +145,7 @@ async def _(event):
     await event.eor(output_str)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="stats$",
 )
 async def stats(
@@ -220,7 +220,7 @@ async def stats(
     await ok.edit(response)
 
 
-@ultroid_cmd(pattern="paste( (.*)|$)", manager=True, allow_all=True)
+@ALPHA_cmd(pattern="paste( (.*)|$)", manager=True, allow_all=True)
 async def _(event):
     try:
         input_str = event.text.split(maxsplit=1)[1]
@@ -267,7 +267,7 @@ async def _(event):
         await xx.edit(reply_text)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="info( (.*)|$)",
     manager=True,
 )
@@ -368,7 +368,7 @@ async def _(event):
     await xx.delete()
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="invite( (.*)|$)",
     groups_only=True,
 )
@@ -406,7 +406,7 @@ async def _(ult):
                 await xx.edit(str(e))
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="rmbg($| (.*))",
 )
 async def abs_rmbg(event):
@@ -462,12 +462,12 @@ async def abs_rmbg(event):
     await xx.delete()
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="telegraph( (.*)|$)",
 )
 async def telegraphcmd(event):
     xx = await event.eor(get_string("com_1"))
-    match = event.pattern_match.group(1).strip() or "Ultroid"
+    match = event.pattern_match.group(1).strip() or "ALPHA"
     reply = await event.get_reply_message()
     if not reply:
         return await xx.eor("`Reply to Message.`")
@@ -502,7 +502,7 @@ async def telegraphcmd(event):
     )
 
 
-@ultroid_cmd(pattern="json( (.*)|$)")
+@ALPHA_cmd(pattern="json( (.*)|$)")
 async def _(event):
     reply_to_id = None
     match = event.pattern_match.group(1).strip()
@@ -537,7 +537,7 @@ async def _(event):
         await event.eor(f"```{msg or None}```")
 
 
-@ultroid_cmd(pattern="suggest( (.*)|$)", manager=True)
+@ALPHA_cmd(pattern="suggest( (.*)|$)", manager=True)
 async def sugg(event):
     sll = event.text.split(maxsplit=1)
     try:
@@ -573,7 +573,7 @@ async def sugg(event):
     await event.delete()
 
 
-@ultroid_cmd(pattern="ipinfo( (.*)|$)")
+@ALPHA_cmd(pattern="ipinfo( (.*)|$)")
 async def ipinfo(event):
     ip = event.text.split()
     ipaddr = ""
@@ -621,7 +621,7 @@ async def ipinfo(event):
         await event.eor(f"ERROR:\n{err}\n{msg}", time=5)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="cpy$",
 )
 async def copp(event):
@@ -637,7 +637,7 @@ async def pepsodent(event):
     await toothpaste(event)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="pst$",
 )
 async def colgate(event):
@@ -657,7 +657,7 @@ async def toothpaste(event):
     await event.delete()
 
 
-@ultroid_cmd(pattern="thumb$")
+@ALPHA_cmd(pattern="thumb$")
 async def thumb_dl(event):
     reply = await event.get_reply_message()
     if not (reply and reply.file):
@@ -671,7 +671,7 @@ async def thumb_dl(event):
     os.remove(m)
 
 
-@ultroid_cmd(pattern="getmsg( ?(.*)|$)")
+@ALPHA_cmd(pattern="getmsg( ?(.*)|$)")
 async def get_restriced_msg(event):
     match = event.pattern_match.group(1).strip()
     if not match:

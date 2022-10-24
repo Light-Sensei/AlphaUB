@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -17,16 +17,16 @@
 
 from AlphaOP.dB.nsfw_db import profan_chat, rem_profan
 
-from . import get_string, ultroid_cmd
+from . import get_string, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="addprofanity$", admins_only=True)
+@ALPHA_cmd(pattern="addprofanity$", admins_only=True)
 async def addp(e):
     profan_chat(e.chat_id, "mute")
     await e.eor(get_string("prof_1"), time=10)
 
 
-@ultroid_cmd(pattern="remprofanity", admins_only=True)
+@ALPHA_cmd(pattern="remprofanity", admins_only=True)
 async def remp(e):
     rem_profan(e.chat_id)
     await e.eor(get_string("prof_2"), time=10)

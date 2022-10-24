@@ -19,13 +19,13 @@ autopic_2: "Tiada keputusan dijumpai `{}`"
 autopic_3: "Mendapat koleksi `{}` yang berkaitan dengan carian anda! \nMulai Autopic!"
 
 # inline
-inline_1: "[Sᴜᴘᴘᴏʀᴛ Uʟᴛʀᴏɪᴅ](t.me/UltroidSupportChat)\n\n
+inline_1: "[Sᴜᴘᴘᴏʀᴛ Uʟᴛʀᴏɪᴅ](t.me/ALPHASupportChat)\n\n
 **Mᴇɴᴜ Bᴀɴᴛᴜᴀɴ Uɴᴛᴜᴋ {}.\n\n
 Pʟᴜɢɪɴs ~ {}**"
-inline_2: "[Sᴜᴘᴘᴏʀᴛ Uʟᴛʀᴏɪᴅ](t.me/UltroidSupportChat)\n\n
+inline_2: "[Sᴜᴘᴘᴏʀᴛ Uʟᴛʀᴏɪᴅ](t.me/ALPHASupportChat)\n\n
 **Mᴇɴᴜ Bᴀɴᴛᴜᴀɴ Uɴᴛᴜᴋ {}.\n\n
 Aᴅᴅᴏɴs ~ {}**"
-inline_3: "[Sᴜᴘᴘᴏʀᴛ Uʟᴛʀᴏɪᴅ](t.me/UltroidSupportChat)\n\n
+inline_3: "[Sᴜᴘᴘᴏʀᴛ Uʟᴛʀᴏɪᴅ](t.me/ALPHASupportChat)\n\n
 **Mᴇɴᴜ Bᴀɴᴛᴜᴀɴ Uɴᴛᴜᴋ {}.\n\n
 Aᴅᴅᴏɴs ~ {}\n\n
 Buat **`.setdb ADDONS kepada True`** dan memulakan semula untuk dapatkan addon.**"
@@ -56,18 +56,18 @@ afk_5: "`Saya akan pergi AFK.`\n\n
 afk_6: "Saya akan pergi AFK."
 
 # bot
-alive_1: "**Userbot Ultroid...**\n\n
+alive_1: "**Userbot ALPHA...**\n\n
 **{}**\n\n
 ┏━━━━━━━━━━━━━━━━━━━━━\n
 ┣ **Pemilik** - `{}`\n
 ┣ **Versi** - `{}`\n
-┣ **Py-Ultroid** - `{}`\n
+┣ **Py-ALPHA** - `{}`\n
 ┣ **Masa hidup** - `{}`\n
 ┣ **Python** - `{}`\n
 ┣ **Telethon** - `{}`\n
 ┣ **Cawangan** - `{}`\n
 ┗━━━━━━━━━━━━━━━━━━━━━"
-log: "**Heroku** Log Ultroid. \nTerap [di sini] ({}) juga!"
+log: "**Heroku** Log ALPHA. \nTerap [di sini] ({}) juga!"
 ping: "**Pong !!** `{}ms`\n**Masa hidup** - `{}`"
 usage: "**⚙️ Penggunaan Dyno ⚙️**:\n\n
 -> **Penggunaan Dyno untuk** `{}`:\n
@@ -149,10 +149,10 @@ sf_14: "SuperFBan Selesai. \nJumlah Feds - {}. \nTidak termasuk - {}. \n {} Fed 
 sf_15: "Memulakan Mass-UnFedBan..."
 sf_16: "SuperUnFBan Selesai. \nJumlah Feds - {}. \nTidak termasuk - {}. \n {} Fed terjejas.\n#TB"
 sf_17: "`Beri saya id seseorang, atau balas mesej seseorang untuk memeriksa fedstatnya.`"
-sf_18: "Senarai feds {} telah dilarang masuk. \n\nDikumpulkan menggunakan Ultroid."
+sf_18: "Senarai feds {} telah dilarang masuk. \n\nDikumpulkan menggunakan ALPHA."
 sf_19: "**Error**\n `Buka sekatan` @MissRose_Bot `dan cuba lagi!"
 sf_20: "`Mengambil maklumat...`"
-sf_21: "\n\nFedInfo diekstrak oleh Ultroid"
+sf_21: "\n\nFedInfo diekstrak oleh ALPHA"
 
 # gdrive
 gdrive_1: "`Anda telah memberi kebenaran kepada Google Drive`"
@@ -160,7 +160,7 @@ gdrive_2: "Pergi [Sini](https://console.developers.google.com/flows/enableapi?ap
 hantar anda punya `GDRIVE_CLIENT_ID` beserta `GDRIVE_CLIENT_SECRET` mengikut ini.\n`GDRIVE_CLIENT_ID GDRIVE_CLIENT_SECRET` dipisahkan dengan ruang."
 gdrive_3: "`Salah Client Id`"
 gdrive_4: "`Ada yang tidak kena! Hantar`/auth` lagi sekali.\nJika sama hubungi `@Cultured_Heaven"
-gdrive_5: "`Berjaya!\nAnda sudah bersedia untuk menggunakan Google Drive dengan Ultroid Userbot.`"
+gdrive_5: "`Berjaya!\nAnda sudah bersedia untuk menggunakan Google Drive dengan ALPHA Userbot.`"
 gdrive_6: "`Pergi ke `{}` dan hantar ``/auth.`"
 gdrive_7: "**Fail berjaya dimuat naik ke G-Drive :**\n\n[{}]({})"
 
@@ -235,10 +235,10 @@ wrd_4: "`စကားလုံးတစ်လုံးကိုစကားလ�
 help_blacklist: "-\n\n• `{i {i} {i} {i} listlist) အာကာသနှင့်အတူစကားလုံးများအားလုံး>` `` `စကားလုံးများ>`\n    ထိုစကားဝိုင်းတွင်ရွေးချယ်ထားသောစကားလုံးနာမည်ပျက်စာရင်း။\n\n• `{i} {i}} rembacklist <word>`\n    စကားလုံးကို Blacklist မှဖယ်ရှားပါ ..\n\n• `listblacklist`\n    နာမည်ပျက်စာရင်းဝင်စကားလုံးများကိုစာရင်းပြုစုပါ။\n\n  အကယ်. လူတစ် ဦး သည်နာမည်ပျက်စာရင်းကိုအသုံးပြုပါကသူ / သူမ၏ MSG ကိုဖျက်ပစ်လိမ့်မည်။\n  'ဒီ chat မှာ admin ဖြစ်ရမယ်'"
 vct_1: "`အသံချက်တင်ပါ ... `"
 vcbot_5: "`ဒီအသံ chating ကိုပြန်လည်ပူးပေါင်းပါ .`"
-calc_1: "• Ultroid Inline Calculator •"
+calc_1: "• ALPHA Inline Calculator •"
 autopic_4: "အလိုအလျောက်အသုံးမပြုပါ !!"
 ascii_2: "`html သို့ပြောင်းခြင်း ... `"
-help_bot: "• `ငါအသက်ရှင်ပြီ '`{ငါ} living inline` ''\n    သင့်ရဲ့ bot အလုပ်လုပ်မရှိမရှိစစ်ဆေးပါ။\n\n• `{i} Ping`\n    ultroid ရဲ့တုံ့ပြန်မှုအချိန်ကိုစစ်ဆေးပါ။\n\n• `{i}}}\n    မည်သည့် update ကိုရရှိနိုင်ပါက Changelogs ကိုကြည့်ပါ။\n\n• `CMDS '\n    plugin အမည်များအားလုံးကိုကြည့်ပါ။\n\n• `` ငါ restart လုပ်ပါ\n    သင်၏ bot ကိုပြန်လည်စတင်ရန်။\n\n• `{i} logs (SYS)`\n    အပြည့်အဝ terminal ကိုမှတ်တမ်းများရယူပါ။\n• `{i} logs Carbon '\n    ကာဗွန်ဒ် sys မှတ်တမ်းများကိုရယူပါ။\n• `{i}} Heroku`\n   Herooku မှတ်တမ်းများကိုနောက်ဆုံးပေါ်လိုင်း 100 ကိုရယူပါ။\n\n• `{i}} shutdown`\n    သင်၏ bot ကိုပိတ်ပါ"
+help_bot: "• `ငါအသက်ရှင်ပြီ '`{ငါ} living inline` ''\n    သင့်ရဲ့ bot အလုပ်လုပ်မရှိမရှိစစ်ဆေးပါ။\n\n• `{i} Ping`\n    ALPHA ရဲ့တုံ့ပြန်မှုအချိန်ကိုစစ်ဆေးပါ။\n\n• `{i}}}\n    မည်သည့် update ကိုရရှိနိုင်ပါက Changelogs ကိုကြည့်ပါ။\n\n• `CMDS '\n    plugin အမည်များအားလုံးကိုကြည့်ပါ။\n\n• `` ငါ restart လုပ်ပါ\n    သင်၏ bot ကိုပြန်လည်စတင်ရန်။\n\n• `{i} logs (SYS)`\n    အပြည့်အဝ terminal ကိုမှတ်တမ်းများရယူပါ။\n• `{i} logs Carbon '\n    ကာဗွန်ဒ် sys မှတ်တမ်းများကိုရယူပါ။\n• `{i}} Heroku`\n   Herooku မှတ်တမ်းများကိုနောက်ဆုံးပေါ်လိုင်း 100 ကိုရယူပါ။\n\n• `{i}} shutdown`\n    သင်၏ bot ကိုပိတ်ပါ"
 ascii_1: "`image ကိုပြန်ပြောပါ"
 sts_2: "`ကာတွန်းစတစ်ကာကိုပြန်ပြောပါ ... `"
 ban_4: "{} ** အားဖြင့် ** {} ** ကိုပိတ်ပင်ထားသည် ** }"
@@ -271,7 +271,7 @@ help_autoban: "• `{i}} autokick <<On / Off>`\n    On - Enable လုပ်ဖ�
 can_2: "δ #USERNAMEUPDATE\n\n@ {} username @} @}"
 aki_1: "ဂိမ်းကိုရပ်စဲလိုက်ပြီ ...."
 youtube_8: "`ဗွီဒီယိုသီချင်းကိုဒေါင်းလုပ်လုပ်ခြင်း ... `"
-help_button: "-\n\n• `{i}} ခလုတ် <button ကို format လုပ်ပါ\n   Create button ကိုသင် pic ကိုပြန်ကြားနိုင်သည်\n\nformat: - `{i}} {i} ခလုတ်ကိုဟေး!@Ustultroid 😎။\n[ultoid |t.me/teteultroid it.me/ultroidsupportChat |အတူတူပင်]\n[Teacenachroid |t.me/Cultured_Heaven] `"
+help_button: "-\n\n• `{i}} ခလုတ် <button ကို format လုပ်ပါ\n   Create button ကိုသင် pic ကိုပြန်ကြားနိုင်သည်\n\nformat: - `{i}} {i} ခလုတ်ကိုဟေး!@UstALPHA 😎။\n[ultoid |t.me/teteALPHA it.me/ALPHAsupportChat |အတူတူပင်]\n[Teacenachroid |t.me/Cultured_Heaven] `"
 bot_1: "ဟေ့ငါအသက်ရှင်နေပါတယ်"
 youtube_7: "ကျွန်တော့်ကို (YouTube) ရှာဖွေမှုရှာဖွေမှုကိုရှာဖွေပါ။"
 com_5: "ဒေါင်းလုပ်လုပ်ခြင်း ..."
@@ -420,7 +420,7 @@ vcbot_2: "** အမှား - **\n{}"
 devs_2: "`python cmd` ပေးပါ"
 unban_2: "`ငါ user ကို unban မပိုင်ခွင့်မရှိဘူး .`"
 nightm_2: "ချိန်ညှိအချိန်အောင်မြင်စွာ"
-help_database: "-\n\n• ** ဒေတာဘေ့စ်၏ command များ,\n\n• `setdb key |တန်ဖိုး\n    ဒေတာဘေ့စအတွက်တန်ဖိုးကိုသတ်မှတ်ပါ။\n    e.g:\n    `{i} i} setdb hi}\n    `{i} i}} setdb hi)ultroid ဒီမှာ\n    `{i} setdb -eightend value's value ည့်သည်တန်ဖိုး 'သို့မဟုတ်` setdb-{i} setdb -e variable viabled `DB ရှိထွက်ပေါက်တန်ဖိုးများကိုထည့်သွင်းရန်တန်ဖိုးကိုထည့်ရန်။\n\n• `{i} i} defb key '\n    DB မှသော့ကိုဖျက်ပါ။\n\n• `{i} {i} {i} {i} {i} {i} kontb |Keyname အသစ်\n    Key Name ကို Update လုပ်ပါ"
+help_database: "-\n\n• ** ဒေတာဘေ့စ်၏ command များ,\n\n• `setdb key |တန်ဖိုး\n    ဒေတာဘေ့စအတွက်တန်ဖိုးကိုသတ်မှတ်ပါ။\n    e.g:\n    `{i} i} setdb hi}\n    `{i} i}} setdb hi)ALPHA ဒီမှာ\n    `{i} setdb -eightend value's value ည့်သည်တန်ဖိုး 'သို့မဟုတ်` setdb-{i} setdb -e variable viabled `DB ရှိထွက်ပေါက်တန်ဖိုးများကိုထည့်သွင်းရန်တန်ဖိုးကိုထည့်ရန်။\n\n• `{i} i} defb key '\n    DB မှသော့ကိုဖျက်ပါ။\n\n• `{i} {i} {i} {i} {i} {i} kontb |Keyname အသစ်\n    Key Name ကို Update လုပ်ပါ"
 sts_4: "`ကာတွန်းကားစတစ်ကာကိုပြန်ပြောပါ"
 antiflood_3: "`မင်းကအသံတိတ်နေတယ်"
 dm_3: "⚜️သတင်းစကား!⚜️"

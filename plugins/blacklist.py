@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from . import get_help
 
@@ -17,10 +17,10 @@ from AlphaOP.dB.blacklist_db import (
     rem_blacklist,
 )
 
-from . import events, get_string, udB, ultroid_bot, ultroid_cmd
+from . import events, get_string, udB, ALPHA_bot, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="blacklist( (.*)|$)", admins_only=True)
+@ALPHA_cmd(pattern="blacklist( (.*)|$)", admins_only=True)
 async def af(e):
     wrd = e.pattern_match.group(1).strip()
     chat = e.chat_id
@@ -30,11 +30,11 @@ async def af(e):
     heh = wrd.split(" ")
     for z in heh:
         add_blacklist(int(chat), z.lower())
-    ultroid_bot.add_handler(blacklist, events.NewMessage(incoming=True))
+    ALPHA_bot.add_handler(blacklist, events.NewMessage(incoming=True))
     await e.eor(get_string("blk_2").format(wrd))
 
 
-@ultroid_cmd(pattern="remblacklist( (.*)|$)", admins_only=True)
+@ALPHA_cmd(pattern="remblacklist( (.*)|$)", admins_only=True)
 async def rf(e):
     wrd = e.pattern_match.group(1).strip()
     chat = e.chat_id
@@ -47,7 +47,7 @@ async def rf(e):
     await e.eor(get_string("blk_4").format(wrd))
 
 
-@ultroid_cmd(pattern="listblacklist$", admins_only=True)
+@ALPHA_cmd(pattern="listblacklist$", admins_only=True)
 async def lsnote(e):
     if x := list_blacklist(e.chat_id):
         sd = get_string("blk_5")
@@ -68,4 +68,4 @@ async def blacklist(e):
 
 
 if udB.get_key("BLACKLIST_DB"):
-    ultroid_bot.add_handler(blacklist, events.NewMessage(incoming=True))
+    ALPHA_bot.add_handler(blacklist, events.NewMessage(incoming=True))

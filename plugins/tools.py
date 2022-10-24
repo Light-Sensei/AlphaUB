@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -72,10 +72,10 @@ from . import (
     get_string,
 )
 from . import humanbytes as hb
-from . import inline_mention, is_url_ok, mediainfo, ultroid_cmd
+from . import inline_mention, is_url_ok, mediainfo, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="tr( (.*)|$)", manager=True)
+@ALPHA_cmd(pattern="tr( (.*)|$)", manager=True)
 async def _(event):
     input = event.pattern_match.group(1).strip().split(maxsplit=1)
     txt = input[1] if len(input) > 1 else None
@@ -100,7 +100,7 @@ async def _(event):
         await event.eor(str(exc), time=5)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="id( (.*)|$)",
     manager=True,
 )
@@ -126,7 +126,7 @@ async def _(event):
     await ult.eor(data)
 
 
-@ultroid_cmd(pattern="bots( (.*)|$)", groups_only=True, manager=True)
+@ALPHA_cmd(pattern="bots( (.*)|$)", groups_only=True, manager=True)
 async def _(ult):
     mentions = "• **Bots in this Chat**: \n"
     if input_str := ult.pattern_match.group(1).strip():
@@ -151,7 +151,7 @@ async def _(ult):
     await ult.eor(mentions)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="hl( (.*)|$)",
 )
 async def _(ult):
@@ -168,7 +168,7 @@ async def _(ult):
     await ult.eor(f"[{text}]({input_})", link_preview=False)
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="circle$",
 )
 async def _(e):
@@ -248,7 +248,7 @@ FilesEMOJI = {
 }
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="ls( (.*)|$)",
 )
 async def _(e):
@@ -332,7 +332,7 @@ async def _(e):
         await e.delete()
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="sg( (.*)|$)",
 )
 async def lastname(steal):
@@ -383,7 +383,7 @@ async def lastname(steal):
         await lol.edit("Error: @SangMataInfo_bot is not responding!.")
 
 
-@ultroid_cmd(pattern="webshot( (.*)|$)")
+@ALPHA_cmd(pattern="webshot( (.*)|$)")
 async def webss(event):
     xx = await event.eor(get_string("com_1"))
     xurl = event.pattern_match.group(1).strip()
@@ -414,7 +414,7 @@ async def webss(event):
     await xx.delete()
 
 
-@ultroid_cmd(pattern="shorturl")
+@ALPHA_cmd(pattern="shorturl")
 async def magic(event):
     try:
         match = event.text.split(maxsplit=1)[1].strip()
@@ -427,7 +427,7 @@ async def magic(event):
     url = match[0]
     data["link"] = url
     data = await async_searcher(
-        "https://tiny.ultroid.tech/api/new",
+        "https://tiny.ALPHA.tech/api/new",
         data=data,
         post=True,
         re_json=True,
@@ -436,5 +436,5 @@ async def magic(event):
     if not response.get("status"):
         return await event.eor(f'**ERROR :** `{response["message"]}`')
     await event.eor(
-        f"• **Ultroid Tiny**\n• Given Url : {url}\n• Shorten Url : {data['response']['tinyUrl']}"
+        f"• **ALPHA Tiny**\n• Given Url : {url}\n• Shorten Url : {data['response']['tinyUrl']}"
     )

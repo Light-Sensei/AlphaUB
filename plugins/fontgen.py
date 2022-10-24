@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from . import get_help
 
@@ -11,7 +11,7 @@ __doc__ = get_help("help_fontgen")
 
 import string
 
-from . import HNDLR, eod, ultroid_cmd
+from . import HNDLR, eod, ALPHA_cmd
 
 _default = string.ascii_letters
 Fonts = {
@@ -22,7 +22,7 @@ Fonts = {
 }
 
 
-@ultroid_cmd(
+@ALPHA_cmd(
     pattern="font( (.*)|$)",
 )
 async def _(e):

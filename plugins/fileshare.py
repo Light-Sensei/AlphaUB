@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from . import get_help
 
@@ -14,10 +14,10 @@ import os
 from AlphaOP.dB.filestore_db import del_stored, get_stored_msg, list_all_stored_msgs
 from AlphaOP.fns.tools import get_file_link
 
-from . import HNDLR, asst, get_string, in_pattern, udB, ultroid_bot, ultroid_cmd
+from . import HNDLR, asst, get_string, in_pattern, udB, ALPHA_bot, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="store$")
+@ALPHA_cmd(pattern="store$")
 async def filestoreplg(event):
     msg = await event.get_reply_message()
     if not msg:
@@ -31,7 +31,7 @@ async def filestoreplg(event):
     )
 
 
-@ultroid_cmd("delstored ?(.*)")
+@ALPHA_cmd("delstored ?(.*)")
 async def _(event):
     match = event.pattern_match.group(1)
     if not match:
@@ -48,11 +48,11 @@ async def _(event):
             "`Message/Media of provided link was already deleted.`", time=5
         )
     del_stored(match[1])
-    await ultroid_bot.delete_messages(udB.get_key("LOG_CHANNEL"), int(msg_id))
+    await ALPHA_bot.delete_messages(udB.get_key("LOG_CHANNEL"), int(msg_id))
     await event.eor("__Deleted__")
 
 
-@ultroid_cmd("liststored$")
+@ALPHA_cmd("liststored$")
 async def liststored(event):
     files = list_all_stored_msgs()
     if not files:

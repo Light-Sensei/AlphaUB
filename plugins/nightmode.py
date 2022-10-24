@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 """
 ✘ Commands Available -
 
@@ -42,10 +42,10 @@ from telethon.tl.types import ChatBannedRights
 
 from AlphaOP.dB.night_db import *
 
-from . import get_string, udB, ultroid_bot, ultroid_cmd
+from . import get_string, udB, ALPHA_bot, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="nmtime( (.*)|$)")
+@ALPHA_cmd(pattern="nmtime( (.*)|$)")
 async def set_time(e):
     if not e.pattern_match.group(1).strip():
         return await e.eor(get_string("nightm_1"))
@@ -60,11 +60,11 @@ async def set_time(e):
         await e.eor(get_string("nightm_1"))
 
 
-@ultroid_cmd(pattern="addnm( (.*)|$)")
+@ALPHA_cmd(pattern="addnm( (.*)|$)")
 async def add_grp(e):
     if pat := e.pattern_match.group(1).strip():
         try:
-            add_night((await ultroid_bot.get_entity(pat)).id)
+            add_night((await ALPHA_bot.get_entity(pat)).id)
             return await e.eor(f"Done, Added {pat} To Night Mode.")
         except BaseException:
             return await e.eor(get_string("nightm_5"), time=5)
@@ -72,11 +72,11 @@ async def add_grp(e):
     await e.eor(get_string("nightm_3"))
 
 
-@ultroid_cmd(pattern="remnm( (.*)|$)")
+@ALPHA_cmd(pattern="remnm( (.*)|$)")
 async def rem_grp(e):
     if pat := e.pattern_match.group(1).strip():
         try:
-            rem_night((await ultroid_bot.get_entity(pat)).id)
+            rem_night((await ALPHA_bot.get_entity(pat)).id)
             return await e.eor(f"Done, Removed {pat} To Night Mode.")
         except BaseException:
             return await e.eor(get_string("nightm_5"), time=5)
@@ -84,13 +84,13 @@ async def rem_grp(e):
     await e.eor(get_string("nightm_4"))
 
 
-@ultroid_cmd(pattern="listnm$")
+@ALPHA_cmd(pattern="listnm$")
 async def rem_grp(e):
     chats = night_grps()
     name = "NightMode Groups Are-:\n\n"
     for x in chats:
         try:
-            ok = await ultroid_bot.get_entity(x)
+            ok = await ALPHA_bot.get_entity(x)
             name += f"@{ok.username}" if ok.username else ok.title
         except BaseException:
             name += str(x)
@@ -101,7 +101,7 @@ async def open_grp():
     chats = night_grps()
     for chat in chats:
         try:
-            await ultroid_bot(
+            await ALPHA_bot(
                 EditChatDefaultBannedRightsRequest(
                     chat,
                     banned_rights=ChatBannedRights(
@@ -116,7 +116,7 @@ async def open_grp():
                     ),
                 )
             )
-            await ultroid_bot.send_message(chat, "**NightMode Off**\n\nGroup Opened 🥳.")
+            await ALPHA_bot.send_message(chat, "**NightMode Off**\n\nGroup Opened 🥳.")
         except Exception as er:
             LOGS.info(er)
 
@@ -128,7 +128,7 @@ async def close_grp():
         h1, m1, h2, m2 = eval(udB.get_key("NIGHT_TIME"))
     for chat in chats:
         try:
-            await ultroid_bot(
+            await ALPHA_bot(
                 EditChatDefaultBannedRightsRequest(
                     chat,
                     banned_rights=ChatBannedRights(
@@ -137,7 +137,7 @@ async def close_grp():
                     ),
                 )
             )
-            await ultroid_bot.send_message(
+            await ALPHA_bot.send_message(
                 chat, f"**NightMode : Group Closed**\n\nGroup Will Open At `{h2}:{m2}`"
             )
         except Exception as er:

@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 from . import get_help
 
@@ -12,10 +12,10 @@ __doc__ = get_help("help_cleanaction")
 
 from telethon.utils import get_display_name
 
-from . import get_string, udB, ultroid_cmd
+from . import get_string, udB, ALPHA_cmd
 
 
-@ultroid_cmd(pattern="addclean$", admins_only=True)
+@ALPHA_cmd(pattern="addclean$", admins_only=True)
 async def _(e):
     key = udB.get_key("CLEANCHAT") or []
     if e.chat_id in key:
@@ -25,7 +25,7 @@ async def _(e):
     await e.eor(get_string("clan_1"), time=5)
 
 
-@ultroid_cmd(pattern="remclean$")
+@ALPHA_cmd(pattern="remclean$")
 async def _(e):
     key = udB.get_key("CLEANCHAT") or []
     if e.chat_id in key:
@@ -34,7 +34,7 @@ async def _(e):
     await e.eor(get_string("clan_2"), time=5)
 
 
-@ultroid_cmd(pattern="listclean$")
+@ALPHA_cmd(pattern="listclean$")
 async def _(e):
     if k := udB.get_key("CLEANCHAT"):
         o = ""

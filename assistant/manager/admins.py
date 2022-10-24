@@ -1,9 +1,9 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
-# <https://www.github.com/Cultured_Heaven/Ultroid/blob/main/LICENSE/>.
+# <https://www.github.com/Cultured_Heaven/ALPHA/blob/main/LICENSE/>.
 
 import re
 
@@ -14,7 +14,7 @@ from AlphaOP import _ult_cache
 from . import *
 
 
-@ultroid_cmd(pattern="d(kick|ban)", manager=True, require="ban_users")
+@ALPHA_cmd(pattern="d(kick|ban)", manager=True, require="ban_users")
 async def dowj(e):
     replied = await e.get_reply_message()
     if replied:

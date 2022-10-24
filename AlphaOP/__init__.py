@@ -1,7 +1,7 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
@@ -14,7 +14,7 @@ run_as_module = False
 
 class ULTConfig:
     lang = "en"
-    thumb = "resources/extras/ultroid.jpg"
+    thumb = "resources/extras/ALPHA.jpg"
 
 if sys.argv[0] == "-m":
     run_as_module = True
@@ -23,11 +23,11 @@ if sys.argv[0] == "-m":
 
     from .configs import Var
     from .startup import *
-    from .startup._database import UltroidDB
-    from .startup.BaseClient import UltroidClient
+    from .startup._database import ALPHADB
+    from .startup.BaseClient import ALPHAClient
     from .startup.connections import validate_session, vc_connection
     from .startup.funcs import _version_changes, autobot, enable_inline, update_envs
-    from .version import ultroid_version
+    from .version import ALPHA_version
 
     if not os.path.exists("./plugins"):
         LOGS.error(
@@ -39,7 +39,7 @@ if sys.argv[0] == "-m":
     _ult_cache = {}
     _ignore_eval = []
 
-    udB = UltroidDB()
+    udB = ALPHADB()
     update_envs()
 
     LOGS.info(f"Connecting to {udB.name}...")
@@ -53,7 +53,7 @@ if sys.argv[0] == "-m":
         if DUAL_MODE:
             udB.del_key("DUAL_MODE")
             DUAL_MODE = False
-        ultroid_bot = None
+        ALPHA_bot = None
 
         if not udB.get_key("BOT_TOKEN"):
             LOGS.critical(
@@ -62,29 +62,29 @@ if sys.argv[0] == "-m":
 
             sys.exit()
     else:
-        ultroid_bot = UltroidClient(
+        ALPHA_bot = ALPHAClient(
             validate_session(Var.SESSION, LOGS),
             udB=udB,
-            app_version=ultroid_version,
-            device_model="Ultroid",
+            app_version=ALPHA_version,
+            device_model="ALPHA",
         )
-        ultroid_bot.run_in_loop(autobot())
+        ALPHA_bot.run_in_loop(autobot())
 
-    asst = UltroidClient(None, bot_token=udB.get_key("BOT_TOKEN"), udB=udB)
+    asst = ALPHAClient(None, bot_token=udB.get_key("BOT_TOKEN"), udB=udB)
 
     if BOT_MODE:
-        ultroid_bot = asst
+        ALPHA_bot = asst
         if udB.get_key("OWNER_ID"):
             try:
-                ultroid_bot.me = ultroid_bot.run_in_loop(
-                    ultroid_bot.get_entity(udB.get_key("OWNER_ID"))
+                ALPHA_bot.me = ALPHA_bot.run_in_loop(
+                    ALPHA_bot.get_entity(udB.get_key("OWNER_ID"))
                 )
             except Exception as er:
                 LOGS.exception(er)
     elif not asst.me.bot_inline_placeholder:
-        ultroid_bot.run_in_loop(enable_inline(ultroid_bot, asst.me.username))
+        ALPHA_bot.run_in_loop(enable_inline(ALPHA_bot, asst.me.username))
 
-    vcClient = vc_connection(udB, ultroid_bot)
+    vcClient = vc_connection(udB, ALPHA_bot)
 
     _version_changes(udB)
 
@@ -98,4 +98,4 @@ else:
 
     LOGS = getLogger("AlphaOP")
 
-    ultroid_bot = asst = udB = vcClient = None
+    ALPHA_bot = asst = udB = vcClient = None

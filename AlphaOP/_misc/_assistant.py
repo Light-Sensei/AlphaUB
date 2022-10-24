@@ -1,7 +1,7 @@
-# Ultroid - UserBot
+# ALPHA - UserBot
 # Copyright (C) 2021-2022 Cultured_Heaven
 #
-# This file is a part of < https://github.com/Cultured_Heaven/Ultroid/ >
+# This file is a part of < https://github.com/Cultured_Heaven/ALPHA/ >
 # PLease read the GNU Affero General Public License in
 # <https://github.com/Cultured_Heaven/AlphaOP/blob/main/LICENSE>.
 
@@ -14,16 +14,16 @@ from telethon.errors import QueryIdInvalidError
 from telethon.events import CallbackQuery, InlineQuery, NewMessage
 from telethon.tl.types import InputWebDocument
 
-from .. import LOGS, asst, udB, ultroid_bot
+from .. import LOGS, asst, udB, ALPHA_bot
 from ..fns.admins import admin_check
 from . import append_or_update, owner_and_sudos
 
-OWNER = ultroid_bot.full_name
+OWNER = ALPHA_bot.full_name
 
 MSG = f"""
-**Ultroid - UserBot**
+**ALPHA - UserBot**
 ➖➖➖➖➖➖➖➖➖➖
-**Owner**: [{OWNER}](tg://user?id={ultroid_bot.uid})
+**Owner**: [{OWNER}](tg://user?id={ALPHA_bot.uid})
 **Support**: @Cultured_Heaven
 ➖➖➖➖➖➖➖➖➖➖
 """
@@ -32,9 +32,9 @@ IN_BTTS = [
     [
         Button.url(
             "Repository",
-            url="https://github.com/Cultured_Heaven/Ultroid",
+            url="https://github.com/Cultured_Heaven/ALPHA",
         ),
-        Button.url("Support", url="https://t.me/UltroidSupportChat"),
+        Button.url("Support", url="https://t.me/ALPHASupportChat"),
     ]
 ]
 
@@ -63,7 +63,7 @@ def callback(data=None, from_users=[], admins=False, owner=False, **kwargs):
     """Assistant's callback decorator"""
     if "me" in from_users:
         from_users.remove("me")
-        from_users.append(ultroid_bot.uid)
+        from_users.append(ALPHA_bot.uid)
 
     def ultr(func):
         async def wrapper(event):
@@ -91,7 +91,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
             if owner and event.sender_id not in owner_and_sudos():
                 res = [
                     await event.builder.article(
-                        title="Ultroid Userbot",
+                        title="ALPHA Userbot",
                         url="https://t.me/Cultured_Heaven",
                         description="(c) Cultured_Heaven",
                         text=MSG,
@@ -127,7 +127,7 @@ def in_pattern(pattern=None, owner=False, **kwargs):
                                 title="Unhandled Exception has Occured!",
                                 text=error_text(),
                                 buttons=Button.url(
-                                    "Report", "https://t.me/UltroidSupportChat"
+                                    "Report", "https://t.me/ALPHASupportChat"
                                 ),
                             )
                         ]
