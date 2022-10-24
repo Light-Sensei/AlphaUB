@@ -18,7 +18,7 @@
 """
 import os
 
-from pyUltroid import ULTConfig
+from AlphaOP import ULTConfig
 
 try:
     import cv2

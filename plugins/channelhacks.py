@@ -15,7 +15,7 @@ import io
 from telethon.errors.rpcerrorlist import FloodWaitError
 from telethon.utils import get_display_name, get_peer_id
 
-from pyUltroid.dB.ch_db import (
+from AlphaOP.dB.ch_db import (
     add_destination,
     add_source_channel,
     get_destinations,

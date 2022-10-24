@@ -18,8 +18,8 @@ from telethon.tl.functions.messages import GetFullChatRequest, SetHistoryTTLRequ
 from telethon.tl.types import InputMessagesFilterPinned
 from telethon.utils import get_display_name
 
-from pyUltroid.dB import DEVLIST
-from pyUltroid.fns.admins import ban_time
+from AlphaOP.dB import DEVLIST
+from AlphaOP.fns.admins import ban_time
 
 from . import (
     HNDLR,

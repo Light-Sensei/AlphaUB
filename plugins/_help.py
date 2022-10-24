@@ -12,8 +12,8 @@ from telethon.errors.rpcerrorlist import (
 )
 from telethon.tl.custom import Button
 
-from pyUltroid.dB._core import HELP, LIST
-from pyUltroid.fns.tools import cmd_regex_replace
+from AlphaOP.dB._core import HELP, LIST
+from AlphaOP.fns.tools import cmd_regex_replace
 
 from . import HNDLR, LOGS, OWNER_NAME, asst, get_string, inline_pic, udB, ultroid_cmd
 

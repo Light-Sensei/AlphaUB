@@ -42,9 +42,9 @@ import asyncio
 import re
 from os import remove
 
-from pyUltroid.dB import DEVLIST
-from pyUltroid.dB.logusers_db import *
-from pyUltroid.dB.pmpermit_db import *
+from AlphaOP.dB import DEVLIST
+from AlphaOP.dB.logusers_db import *
+from AlphaOP.dB.pmpermit_db import *
 
 try:
     from tabulate import tabulate

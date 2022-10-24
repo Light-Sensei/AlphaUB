@@ -35,9 +35,9 @@ from telethon.errors.rpcerrorlist import (
 from telethon.events import Raw
 from telethon.tl.types import InputMediaPoll, Poll, PollAnswer, UpdateMessagePollVote
 
-from pyUltroid._misc._decorators import ultroid_cmd
-from pyUltroid.fns.helper import inline_mention
-from pyUltroid.fns.tools import async_searcher
+from AlphaOP._misc._decorators import ultroid_cmd
+from AlphaOP.fns.helper import inline_mention
+from AlphaOP.fns.tools import async_searcher
 
 from . import *
 

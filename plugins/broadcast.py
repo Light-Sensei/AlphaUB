@@ -15,7 +15,7 @@ import io
 
 from telethon.utils import get_display_name
 
-from pyUltroid.dB.broadcast_db import *
+from AlphaOP.dB.broadcast_db import *
 
 from . import HNDLR, LOGS, eor, get_string, udB, ultroid_bot, ultroid_cmd
 

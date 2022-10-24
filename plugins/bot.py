@@ -21,7 +21,7 @@ from telethon.errors.rpcerrorlist import (
     ChatSendMediaForbiddenError,
 )
 
-from pyUltroid.version import __version__ as UltVer
+from AlphaOP.version import __version__ as UltVer
 
 from . import HOSTED_ON, LOGS
 
@@ -84,7 +84,7 @@ The Ultroid Userbot
   ◍ Telethon - {}
 """
 
-in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>PyUltroid -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @TeamUltroid</b>"
+in_alive = "{}\n\n🌀 <b>Ultroid Version -><b> <code>{}</code>\n🌀 <b>AlphaOP -></b> <code>{}</code>\n🌀 <b>Python -></b> <code>{}</code>\n🌀 <b>Uptime -></b> <code>{}</code>\n🌀 <b>Branch -></b> [ {} ]\n\n• <b>Join @TeamUltroid</b>"
 
 
 @callback("alive")
@@ -214,7 +214,7 @@ async def restartbt(ult):
     if len(sys.argv) > 1:
         os.execl(sys.executable, sys.executable, "main.py")
     else:
-        os.execl(sys.executable, sys.executable, "-m", "pyUltroid")
+        os.execl(sys.executable, sys.executable, "-m", "AlphaOP")
 
 
 @ultroid_cmd(
@@ -315,7 +315,7 @@ async def _(e):
         await bash("git pull -f && pip3 install -r requirements.txt")
         call_back()
         await xx.edit(get_string("upd_7"))
-        os.execl(sys.executable, "python3", "-m", "pyUltroid")
+        os.execl(sys.executable, "python3", "-m", "AlphaOP")
         # return
     m = await updater()
     branch = (Repo.init()).active_branch

@@ -3,7 +3,7 @@ Any contribution done to this repository will be appreciated! 🎉
 
 ### About Ultroid
 - **Ultroid** is Telegram Userbot, which allow you to perform many task easily. 
-- It's base core is a pip package named [`pyUltroid`](https://GitHub.com/TeamUltroid/pyUltroid).
+- It's base core is a pip package named [`AlphaOP`](https://GitHub.com/TeamUltroid/AlphaOP).
 - This repository, contains Ultroid's official plugin files.
 - moreover, Ultroid User also have an option to get more plugins available at [`UltroidAddons`](https://github.com/TeamUltroid/UltroidAddons)
 

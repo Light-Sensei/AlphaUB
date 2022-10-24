@@ -12,7 +12,7 @@ __doc__ = get_help("help_echo")
 
 from telethon.utils import get_display_name
 
-from pyUltroid.dB.echo_db import add_echo, check_echo, list_echo, rem_echo
+from AlphaOP.dB.echo_db import add_echo, check_echo, list_echo, rem_echo
 
 from . import LOGS, events, ultroid_bot, ultroid_cmd
 

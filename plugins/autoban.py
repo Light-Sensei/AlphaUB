@@ -12,8 +12,8 @@ __doc__ = get_help("help_autoban")
 from telethon import events
 from telethon.tl.types import Channel
 
-from pyUltroid.dB import autoban_db, dnd_db
-from pyUltroid.fns.admins import get_update_linked_chat
+from AlphaOP.dB import autoban_db, dnd_db
+from AlphaOP.fns.admins import get_update_linked_chat
 
 from . import LOGS, asst, get_string, inline_mention, ultroid_bot, ultroid_cmd
 

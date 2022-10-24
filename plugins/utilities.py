@@ -62,9 +62,9 @@ try:
 except ImportError:
     Image = None
 
-from pyUltroid._misc._assistant import asst_cmd
-from pyUltroid.dB.gban_mute_db import is_gbanned
-from pyUltroid.fns.tools import get_chat_and_msgid
+from AlphaOP._misc._assistant import asst_cmd
+from AlphaOP.dB.gban_mute_db import is_gbanned
+from AlphaOP.fns.tools import get_chat_and_msgid
 
 try:
     from telegraph import upload_file as uf

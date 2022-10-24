@@ -40,7 +40,7 @@ except ImportError:
 from telethon.tl.functions.messages import EditChatDefaultBannedRightsRequest
 from telethon.tl.types import ChatBannedRights
 
-from pyUltroid.dB.night_db import *
+from AlphaOP.dB.night_db import *
 
 from . import get_string, udB, ultroid_bot, ultroid_cmd
 

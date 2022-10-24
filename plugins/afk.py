@@ -15,8 +15,8 @@ import asyncio
 from telegraph import upload_file as uf
 from telethon import events
 
-from pyUltroid.dB.afk_db import add_afk, del_afk, is_afk
-from pyUltroid.dB.pmpermit_db import is_approved
+from AlphaOP.dB.afk_db import add_afk, del_afk, is_afk
+from AlphaOP.dB.pmpermit_db import is_approved
 
 from . import (
     LOG_CHANNEL,

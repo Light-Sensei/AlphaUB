@@ -14,7 +14,7 @@
 """
 from datetime import timedelta
 
-from pyUltroid.fns.admins import ban_time
+from AlphaOP.fns.admins import ban_time
 
 from . import get_string, ultroid_cmd
 

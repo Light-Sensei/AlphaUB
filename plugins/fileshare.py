@@ -11,8 +11,8 @@ __doc__ = get_help("help_fileshare")
 
 import os
 
-from pyUltroid.dB.filestore_db import del_stored, get_stored_msg, list_all_stored_msgs
-from pyUltroid.fns.tools import get_file_link
+from AlphaOP.dB.filestore_db import del_stored, get_stored_msg, list_all_stored_msgs
+from AlphaOP.fns.tools import get_file_link
 
 from . import HNDLR, asst, get_string, in_pattern, udB, ultroid_bot, ultroid_cmd
 

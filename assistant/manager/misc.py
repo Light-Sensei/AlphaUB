@@ -10,8 +10,8 @@ import random
 
 import aiohttp
 
-from pyUltroid.dB import DEVLIST
-from pyUltroid.fns.admins import admin_check
+from AlphaOP.dB import DEVLIST
+from AlphaOP.fns.admins import admin_check
 
 from . import *
 

@@ -18,7 +18,7 @@ from pprint import pprint
 
 from telethon.utils import get_display_name
 
-from pyUltroid import _ignore_eval
+from AlphaOP import _ignore_eval
 
 from . import *
 
@@ -32,7 +32,7 @@ from random import choice
 try:
     from yaml import safe_load
 except ImportError:
-    from pyUltroid.fns.tools import safe_load
+    from AlphaOP.fns.tools import safe_load
 try:
     from telegraph import upload_file as uf
 except ImportError:
